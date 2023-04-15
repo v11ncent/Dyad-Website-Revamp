@@ -1,14 +1,42 @@
 @use "../mixins/mixins" as mixins;
 @use "../tokens/tokens" as tokens;
 
-section {
+%section {
   @include mixins.section-layout();
 
   .max-width {
     @include mixins.max-width();
   }
 
+  .black-muted {
+    color: tokens.$colors-paragraph;
+  }
+}
+
+section {
+  @extend %section;
+
   header:first-child {
     @include mixins.header();
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+}
+
+section#hero {
+  @extend %section;
+
+  header {
+    @include mixins.header(hero);
+  }
+
+  .content {
+    max-width: 70ch;
+
+    p {
+      font-size: 1.5rem;
+    }
   }
 }

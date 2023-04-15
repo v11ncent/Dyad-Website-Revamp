@@ -1,0 +1,19 @@
+@use "../../tokens/tokens" as tokens;
+@use "../../mixins/mixins" as mixins;
+
+%button {
+  @include mixins.reset-anchor;
+  @include mixins.button();
+}
+
+.button-primary {
+  @extend %button;
+  padding: 0.75rem 3rem;
+  color: white;
+  background-color: tokens.$colors-brand;
+}
+
+.button-secondary {
+  @extend %button;
+  color: tokens.$colors-brand;
+}

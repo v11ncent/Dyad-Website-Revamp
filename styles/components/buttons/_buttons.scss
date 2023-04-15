@@ -1,0 +1,21 @@
+@use "../../tokens/tokens" as tokens;
+@use "../../mixins/mixins" as mixins;
+
+.buttons {
+  @include mixins.flex(column, center, center, 1rem);
+  margin-top: 1.5rem;
+
+  @media (min-width: 37.5rem) {
+    @include mixins.flex(row, center, flex-start, 2rem);
+  }
+}
+
+// select individual buttons
+
+.buttons > * {
+  min-width: 100%;
+
+  @media (min-width: 37.5rem) {
+    min-width: fit-content;
+  }
+}

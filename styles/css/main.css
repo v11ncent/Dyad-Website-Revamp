@@ -67,29 +67,68 @@ body {
   border-width: 0;
 }
 
-section {
+section#hero, section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 1rem;
 }
-section .max-width {
+section#hero .max-width, section .max-width {
   max-width: 81.25rem;
 }
+section#hero .black-muted, section .black-muted {
+  color: rgba(0, 0, 0, 0.75);
+}
+
 section header:first-child {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   gap: 1rem;
-  margin-bottom: 3rem;
-  font-weight: 500;
+  margin-bottom: 1.5rem;
+  line-height: 1.25;
+}
+section header:first-child h1 {
+  font-size: clamp(2.5rem, 3vw, 3.5rem);
+  text-align: left;
+  font-weight: 600;
 }
 section header:first-child h2 {
   font-size: 2rem;
+  text-align: center;
   font-weight: 500;
+}
+section p {
+  font-size: 1.25rem;
+}
+
+section#hero header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+section#hero header h1 {
+  font-size: clamp(2.5rem, 3vw, 3.5rem);
+  text-align: left;
+  font-weight: 600;
+}
+section#hero header h2 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 500;
+}
+section#hero .content {
+  max-width: 70ch;
+}
+section#hero .content p {
+  font-size: 1.5rem;
 }
 
 .cards {
@@ -158,6 +197,54 @@ section header:first-child h2 {
   max-width: 1.75rem;
   border: 1px solid lightgrey;
   border-radius: 0.25rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+@media (min-width: 37.5rem) {
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+}
+
+.buttons > * {
+  min-width: 100%;
+}
+@media (min-width: 37.5rem) {
+  .buttons > * {
+    min-width: fit-content;
+  }
+}
+
+.button-secondary, .button-primary {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 1.125rem;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+.button-primary {
+  padding: 0.75rem 3rem;
+  color: white;
+  background-color: #377dff;
+}
+
+.button-secondary {
+  color: #377dff;
 }
 
 /*# sourceMappingURL=main.css.map */
