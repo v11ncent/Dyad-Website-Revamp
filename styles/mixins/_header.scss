@@ -1,8 +1,19 @@
-@include header() {
+@mixin header($hero: false) {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   gap: 1rem;
   margin-bottom: 3rem;
+  font-weight: 500;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  @if ($hero) {
+    font-weight: 600;
+  }
 }

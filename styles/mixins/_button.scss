@@ -1,0 +1,12 @@
+/* This mixin is for call to action buttons/anchors
+   Doesn't necessarily have to be a button */
+
+@use "../tokens/tokens" as tokens;
+
+@mixin button() {
+  padding: 0.5rem 3rem;
+  font-weight: 500;
+  color: white;
+  background-color: tokens.$color-brand;
+  border-radius: tokens.$radius-main;
+}

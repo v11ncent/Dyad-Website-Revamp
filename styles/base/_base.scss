@@ -1,4 +1,9 @@
 @use "../tokens/tokens" as tokens;
+@use "../mixins/mixins" as mixins;
+
+body {
+  font-family: tokens.$ff-main;
+}
 
 .sr-only {
   position: absolute;

@@ -1,0 +1,14 @@
+@use "../mixins/mixins" as mixins;
+@use "../tokens/tokens" as tokens;
+
+section {
+  @include mixins.section-layout();
+
+  .max-width {
+    @include mixins.max-width();
+  }
+
+  header:first-child {
+    @include mixins.header();
+  }
+}
