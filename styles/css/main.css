@@ -55,6 +55,17 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.max-width {
+  max-width: 81.25rem;
+}
+
+.content-paragraph {
+  color: rgba(0, 0, 0, 0.75);
+  max-width: 80ch;
+  margin: 0.5rem;
+  font-size: 1.25rem;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -67,50 +78,23 @@ body {
   border-width: 0;
 }
 
-section#hero, section {
+section#hero {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-}
-section#hero .max-width, section .max-width {
-  max-width: 81.25rem;
-}
-section#hero .black-muted, section .black-muted {
-  color: rgba(0, 0, 0, 0.75);
-}
-
-section header:first-child {
-  display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.25;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  position: relative;
 }
-section header:first-child h1 {
-  font-size: clamp(2.5rem, 3vw, 3.5rem);
-  text-align: left;
-  font-weight: 600;
-}
-section header:first-child h2 {
-  font-size: 2rem;
-  text-align: center;
-  font-weight: 500;
-}
-section p {
-  font-size: 1.25rem;
-}
-
 section#hero header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   line-height: 1.25;
   margin-bottom: 1rem;
 }
@@ -124,11 +108,41 @@ section#hero header h2 {
   text-align: center;
   font-weight: 500;
 }
-section#hero .content {
-  max-width: 70ch;
-}
 section#hero .content p {
   font-size: 1.5rem;
+}
+section#hero .image {
+  display: none;
+}
+
+section:not(#hero) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-block: 7.5rem;
+  padding: 7.5rem 0 7.5rem 0;
+}
+section:not(#hero) header:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.25;
+}
+section:not(#hero) header:first-child h1 {
+  font-size: clamp(2.5rem, 3vw, 3.5rem);
+  text-align: left;
+  font-weight: 600;
+}
+section:not(#hero) header:first-child h2 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 500;
 }
 
 .cards {

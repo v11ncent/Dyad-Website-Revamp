@@ -1,42 +1,12 @@
 @use "../mixins/mixins" as mixins;
 @use "../tokens/tokens" as tokens;
 
-%section {
-  @include mixins.section-layout();
-
-  .max-width {
-    @include mixins.max-width();
-  }
-
-  .black-muted {
-    color: tokens.$colors-paragraph;
-  }
-}
-
-section {
-  @extend %section;
+section:not(#hero) {
+  @include mixins.flex(column, center, center, 1rem);
+  padding-block: 7.5rem;
+  padding: 7.5rem 0 7.5rem 0; // fallback
 
   header:first-child {
     @include mixins.header();
-  }
-
-  p {
-    font-size: 1.25rem;
-  }
-}
-
-section#hero {
-  @extend %section;
-
-  header {
-    @include mixins.header(hero);
-  }
-
-  .content {
-    max-width: 70ch;
-
-    p {
-      font-size: 1.5rem;
-    }
   }
 }

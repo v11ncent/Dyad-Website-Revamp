@@ -5,6 +5,14 @@ body {
   font-family: tokens.$ff-main;
 }
 
+.max-width {
+  @include mixins.max-width();
+}
+
+.content-paragraph {
+  @include mixins.content-paragraph();
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

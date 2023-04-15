@@ -1,0 +1,8 @@
+@use "../tokens/tokens" as tokens;
+
+@mixin content-paragraph() {
+  color: tokens.$colors-paragraph;
+  max-width: 80ch;
+  margin: 0.5rem;
+  font-size: 1.25rem;
+}

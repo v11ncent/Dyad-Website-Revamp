@@ -1,0 +1,22 @@
+@use "../mixins/mixins" as mixins;
+@use "../tokens/tokens" as tokens;
+
+section#hero {
+  @include mixins.flex(row, center, center, 1rem);
+  min-height: 100vh;
+  position: relative;
+
+  header {
+    @include mixins.header(hero);
+  }
+
+  .content {
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+  .image {
+    display: none;
+  }
+}
