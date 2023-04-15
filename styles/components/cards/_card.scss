@@ -5,8 +5,13 @@
   color: tokens.$colors-paragraph;
   border-radius: tokens.$br-main;
   background-color: white;
-  flex-grow: 1;
   transition: all 0.125s ease-in-out;
+  flex-basis: 100%;
+
+  @media (min-width: 600px) {
+    flex: 1 1 22.5rem;
+    max-width: 30rem;
+  }
 
   &:hover {
     transform: translateY(-0.25rem);
@@ -35,10 +40,6 @@
 
   .card__description {
     font-size: 1.125rem;
-  }
-
-  @media (min-width: tokens.$bp-cards) {
-    max-width: 22.5rem;
   }
 }
 

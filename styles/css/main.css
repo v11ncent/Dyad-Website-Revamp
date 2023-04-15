@@ -64,7 +64,6 @@ body {
 
 .content-paragraph {
   color: rgba(0, 0, 0, 0.6);
-  max-width: 80ch;
   margin: 0.5rem;
   font-size: 1.25rem;
 }
@@ -234,7 +233,6 @@ body {
 }
 .stats > .stat .stat__description {
   color: rgba(0, 0, 0, 0.6);
-  max-width: 80ch;
   margin: 0.5rem;
   font-size: 1.25rem;
 }
@@ -264,8 +262,14 @@ body {
   color: rgba(0, 0, 0, 0.6);
   border-radius: 0.25rem;
   background-color: white;
-  flex-grow: 1;
   transition: all 0.125s ease-in-out;
+  flex-basis: 100%;
+}
+@media (min-width: 600px) {
+  .card {
+    flex: 1 1 22.5rem;
+    max-width: 30rem;
+  }
 }
 .card:hover {
   transform: translateY(-0.25rem);
@@ -289,11 +293,6 @@ body {
 }
 .card .card__description {
   font-size: 1.125rem;
-}
-@media (min-width: 43.75rem) {
-  .card {
-    max-width: 22.5rem;
-  }
 }
 
 .card.card-team {
