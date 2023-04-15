@@ -1,0 +1,57 @@
+@use "../mixins/mixins" as mixins;
+@use "../tokens/tokens" as tokens;
+
+.footer {
+  background-color: tokens.$colors-brand-muted;
+  padding-block: 5rem;
+  padding: 5rem 0 5rem 0; // fallback
+
+  @media (min-width: 62.5rem) {
+    @include mixins.flex(row, center, center);
+  }
+}
+
+.footer .navigation {
+  @include mixins.flex(column, flex-start, center, 2rem);
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 3rem;
+
+  & > * {
+    flex: 1;
+  }
+
+  header {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    @include mixins.reset-list();
+    @include mixins.flex(column, flex-start, center, 0.5rem);
+  }
+
+  a {
+    @include mixins.reset-anchor();
+    color: tokens.$colors-paragraph;
+  }
+
+  .contact {
+    img {
+      margin-bottom: 2rem;
+    }
+
+    address {
+      @include mixins.flex(column, flex-start, center, 0.5rem);
+      font-style: normal;
+    }
+  }
+
+  @media (min-width: 62.5rem) {
+    @include mixins.flex(row, flex-start, center, 5rem);
+  }
+}
+
+.footer .copyright {
+  @include mixins.flex(row, center, center);
+  padding-top: 3rem;
+  color: tokens.$colors-paragraph;
+}

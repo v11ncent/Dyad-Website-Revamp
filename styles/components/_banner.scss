@@ -26,6 +26,7 @@
 
 .stats > .stat {
   @include mixins.flex(column, center, center);
+  flex: 1; // fill the container
 
   .stat__heading {
     font-size: 3.5rem;
