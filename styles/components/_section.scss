@@ -1,10 +1,9 @@
 @use "../mixins/mixins" as mixins;
 @use "../tokens/tokens" as tokens;
 
-section:not(#hero) {
+.section {
+  @include mixins.section();
   @include mixins.flex(column, center, center, 1rem);
-  padding-block: 7.5rem;
-  padding: 7.5rem 0 7.5rem 0; // fallback
 
   header:first-child {
     @include mixins.header();

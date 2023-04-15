@@ -14,9 +14,13 @@
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     text-align: center;
     font-weight: 500;
+
+    @media (min-width: 62.5rem) {
+      font-size: 2rem;
+    }
   }
 
   @if ($hero) {
