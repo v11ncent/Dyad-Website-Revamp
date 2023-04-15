@@ -3,10 +3,19 @@
 
 .cards {
   @include mixins.reset-list();
-  @include mixins.flex(row, center, center, 1rem);
+  @include mixins.flex(row, center, center, 3rem);
+
+  @media (min-width: 62.5rem) {
+    @include mixins.flex(row, center, center, 2rem);
+  }
 
   li {
     flex-basis: 100%;
+    transition: all 0.125s ease-in-out;
+
+    &:hover {
+      transform: translateY(-0.25rem);
+    }
 
     @media (min-width: 50rem) {
       flex-basis: 22.5rem;

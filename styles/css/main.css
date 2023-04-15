@@ -62,7 +62,7 @@ body {
 }
 
 .content-paragraph {
-  color: rgba(0, 0, 0, 0.75);
+  color: rgba(0, 0, 0, 0.6);
   max-width: 80ch;
   margin: 0.5rem;
   font-size: 1.25rem;
@@ -122,6 +122,7 @@ body {
 }
 .hero .content p {
   font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.8);
 }
 .hero .image {
   display: none;
@@ -229,7 +230,7 @@ body {
   font-weight: 500;
 }
 .stats > .stat .stat__description {
-  color: rgba(0, 0, 0, 0.75);
+  color: rgba(0, 0, 0, 0.6);
   max-width: 80ch;
   margin: 0.5rem;
   font-size: 1.25rem;
@@ -242,11 +243,25 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 3rem;
   flex-wrap: wrap;
+}
+@media (min-width: 62.5rem) {
+  .cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
 }
 .cards li {
   flex-basis: 100%;
+  transition: all 0.125s ease-in-out;
+}
+.cards li:hover {
+  transform: translateY(-0.25rem);
 }
 @media (min-width: 50rem) {
   .cards li {
@@ -254,36 +269,41 @@ body {
   }
 }
 
-.card {
-  padding: 2rem;
-  color: rgba(0, 0, 0, 0.75);
+.card-blog, .card-team {
+  color: rgba(0, 0, 0, 0.6);
   border-radius: 0.25rem;
   background-color: white;
-  box-shadow: 0rem 0.375rem 1.5rem 0rem rgba(140, 152, 164, 0.125);
 }
-.card .card__image {
-  max-width: 4.25rem;
-  border-radius: 100%;
+.card-blog .card__image, .card-team .card__image {
   margin-bottom: 1.5rem;
 }
-.card header {
+.card-blog header, .card-team header {
   margin-bottom: 0.5rem;
 }
-.card header > .card__overline {
+.card-blog header .card__overline, .card-team header .card__overline {
   font-size: 0.8125rem;
   font-weight: 300;
   text-transform: uppercase;
   margin-bottom: 0.25rem;
 }
-.card header > .card__heading {
+.card-blog header .card__heading, .card-team header .card__heading {
   font-size: 1.25rem;
   font-weight: 500;
   color: black;
 }
-.card .card__description {
+.card-blog .card__description, .card-team .card__description {
   font-size: 1.125rem;
 }
-.card .socials {
+
+.card-team {
+  padding: 2rem;
+  box-shadow: 0rem 0.375rem 1.5rem 0rem rgba(140, 152, 164, 0.125);
+}
+.card-team .card__image {
+  max-width: 4.25rem;
+  border-radius: 100%;
+}
+.card-team .socials {
   list-style-type: none;
   padding: 0;
   display: flex;
@@ -294,7 +314,7 @@ body {
   flex-wrap: wrap;
   margin-top: 3rem;
 }
-.card .socials .social {
+.card-team .socials .social {
   text-decoration: none;
   color: black;
   padding: 0.25rem;
@@ -303,7 +323,11 @@ body {
   border-radius: 0.25rem;
 }
 
-.buttons {
+.card-blog .card__image {
+  border-radius: 0.25rem;
+}
+
+.buttons-hero {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -313,7 +337,7 @@ body {
   margin-top: 1.5rem;
 }
 @media (min-width: 37.5rem) {
-  .buttons {
+  .buttons-hero {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -322,17 +346,17 @@ body {
     flex-wrap: wrap;
   }
 }
-
-.buttons > * {
-  min-width: 100%;
+.buttons-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+  margin-top: 3rem;
 }
-@media (min-width: 37.5rem) {
-  .buttons > * {
-    min-width: fit-content;
-  }
-}
 
-.button-secondary, .button-primary {
+.button-tertiary, .button-secondary, .button-primary {
   text-decoration: none;
   color: black;
   font-weight: 500;
@@ -345,10 +369,33 @@ body {
   padding: 0.75rem 3rem;
   color: white;
   background-color: #377dff;
+  min-width: 100%;
+}
+@media (min-width: 37.5rem) {
+  .button-primary {
+    min-width: fit-content;
+  }
 }
 
 .button-secondary {
   color: #377dff;
+  min-width: 100%;
+}
+@media (min-width: 37.5rem) {
+  .button-secondary {
+    min-width: fit-content;
+  }
+}
+
+.button-tertiary {
+  padding: 0.8125rem 1.25rem;
+  color: rgba(0, 0, 0, 0.6);
+  border: 1px solid lightgrey;
+  border-radius: 2rem;
+}
+.button-tertiary .highlight {
+  color: #377dff;
+  margin-left: 0.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */
