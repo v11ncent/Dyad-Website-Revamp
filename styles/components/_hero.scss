@@ -4,10 +4,15 @@
 .hero {
   @include mixins.flex(row, center, center, 1rem);
   min-height: fit-content;
-  position: relative;
+  text-align: left;
 
-  @media (min-width: 62.5rem) {
-    min-height: 80vh;
+  .max-width {
+    @include mixins.flex(row, center, center);
+  }
+
+  header,
+  .content {
+    max-width: 100ch;
   }
 
   header {
@@ -15,13 +20,16 @@
   }
 
   .content {
+    @include mixins.flex(column, center, center);
+
     p {
       font-size: 1.5rem;
       color: tokens.$colors-paragraph-hero;
     }
   }
 
-  .image {
-    display: none;
+  @media (min-width: tokens.$bp-hero) {
+    text-align: center;
+    min-height: 70vh;
   }
 }

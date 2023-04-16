@@ -5,7 +5,7 @@
   @include mixins.section();
   @include mixins.flex(column, center, center, 1rem);
 
-  header:first-child {
+  &:not(.hero) header:first-child {
     @include mixins.header();
   }
 }

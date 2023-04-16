@@ -3,11 +3,12 @@
 
 .buttons {
   &-hero {
-    @include mixins.flex(column, center, center, 1rem);
+    @include mixins.flex(row, center, center, 1rem);
     margin-top: 1.5rem;
+    min-width: 100%;
 
-    @media (min-width: 37.5rem) {
-      @include mixins.flex(row, center, flex-start, 2rem);
+    @media (min-width: tokens.$bp-hero) {
+      @include mixins.flex(row, center, center, 2rem);
     }
   }
 

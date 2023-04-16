@@ -21,12 +21,12 @@
   }
 
   header {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   ul {
     @include mixins.reset-list();
-    @include mixins.flex(column, flex-start, center, 0.5rem);
+    @include mixins.flex(column, flex-start, center, 0.75rem);
   }
 
   a {
