@@ -160,7 +160,7 @@ body {
 }
 .hero header,
 .hero .content__container {
-  max-width: 80ch;
+  max-width: 85ch;
 }
 @media (min-width: 90.625rem) {
   .hero header,
@@ -301,11 +301,10 @@ body {
   justify-content: center;
   gap: 0;
   flex-wrap: wrap;
-  margin-inline: 1rem;
   margin: 0 1rem 0 1rem;
+  margin-inline: 1rem;
   border-radius: 0.25rem;
   background-color: #fff8f3;
-  display: none;
 }
 @media (min-width: 62.5rem) {
   .banner {

@@ -15,7 +15,6 @@ body {
 .content-paragraph {
   @include mixins.content-paragraph();
 }
-
 .logo {
   border-radius: 50%;
 }
