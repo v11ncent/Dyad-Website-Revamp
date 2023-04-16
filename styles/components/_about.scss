@@ -7,7 +7,11 @@
   .max-width {
     display: grid;
     gap: 1rem;
-    place-items: center;
+    place-items: center end;
+
+    .content__container {
+      @include mixins.flex(column, flex-start, space-between);
+    }
 
     .image__container {
       width: 100%;
@@ -30,7 +34,7 @@
 
     @media (min-width: 75rem) {
       grid-template-columns: repeat(2, 1fr);
-      gap: 6rem;
+      gap: 5rem;
     }
   }
 }

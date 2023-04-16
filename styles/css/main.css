@@ -258,7 +258,15 @@ body {
 .about .max-width {
   display: grid;
   gap: 1rem;
-  place-items: center;
+  place-items: center end;
+}
+.about .max-width .content__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0;
+  flex-wrap: wrap;
 }
 .about .max-width .image__container {
   width: 100%;
@@ -281,7 +289,7 @@ body {
 @media (min-width: 75rem) {
   .about .max-width {
     grid-template-columns: repeat(2, 1fr);
-    gap: 6rem;
+    gap: 5rem;
   }
 }
 
@@ -480,8 +488,7 @@ body {
 
 .footer {
   background-color: #fff8f3;
-  padding-block: 5rem;
-  padding: 5rem 0 5rem 0;
+  padding-top: 5rem;
 }
 @media (min-width: 62.5rem) {
   .footer {
@@ -501,7 +508,6 @@ body {
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
-  padding-bottom: 3rem;
 }
 .footer .navigation > * {
   flex: 1;
@@ -557,7 +563,7 @@ body {
   justify-content: center;
   gap: 0;
   flex-wrap: wrap;
-  padding-top: 3rem;
+  padding: 3rem;
   color: rgba(0, 0, 0, 0.6);
 }
 

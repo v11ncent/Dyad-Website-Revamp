@@ -3,8 +3,7 @@
 
 .footer {
   background-color: tokens.$colors-brand-muted;
-  padding-block: 5rem;
-  padding: 5rem 0 5rem 0; // fallback
+  padding-top: 5rem;
 
   @media (min-width: 62.5rem) {
     @include mixins.flex(row, center, center);
@@ -13,7 +12,6 @@
 
 .footer .navigation {
   @include mixins.flex(column, flex-start, center, 2rem);
-  padding-bottom: 3rem;
 
   & > * {
     flex: 1;
@@ -55,6 +53,6 @@
 
 .footer .copyright {
   @include mixins.flex(row, center, center);
-  padding-top: 3rem;
+  padding: 3rem;
   color: tokens.$colors-paragraph;
 }
