@@ -40,3 +40,10 @@
     margin-left: 0.5rem;
   }
 }
+
+.button-popup {
+  @extend %button;
+  padding: 0.5rem 3rem;
+  color: white;
+  background-color: tokens.$colors-brand;
+}
