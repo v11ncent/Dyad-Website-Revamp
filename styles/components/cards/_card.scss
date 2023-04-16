@@ -8,7 +8,7 @@
   transition: all 0.125s ease-in-out;
   flex-basis: 100%;
 
-  @media (min-width: 600px) {
+  @media (min-width: 37.5rem) {
     flex: 1 1 22.5rem;
     max-width: 30rem;
   }

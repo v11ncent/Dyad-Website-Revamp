@@ -4,6 +4,6 @@
 
   @media (min-width: 62.5rem) {
     padding: 5rem 0 5rem 0; //fallback
-    padding-block: 3rem;
+    padding-block: min(5vw, 5rem);
   }
 }

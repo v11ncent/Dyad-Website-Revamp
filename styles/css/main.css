@@ -161,8 +161,14 @@ body {
   }
 }
 .hero header,
-.hero .content {
-  max-width: 85ch;
+.hero .content__container {
+  max-width: 80ch;
+}
+@media (min-width: 90.625rem) {
+  .hero header,
+.hero .content__container {
+    max-width: 100ch;
+  }
 }
 .hero header {
   display: flex;
@@ -188,7 +194,7 @@ body {
     font-size: 1.75rem;
   }
 }
-.hero .content {
+.hero .content__container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -196,52 +202,17 @@ body {
   gap: 0;
   flex-wrap: wrap;
 }
-.hero .content p {
+.hero .content__container p {
   font-size: 1.5rem;
   color: rgba(0, 0, 0, 0.85);
+}
+.hero img {
+  display: none;
 }
 @media (min-width: 43.75rem) {
   .hero {
     text-align: center;
     min-height: 80vh;
-  }
-}
-.hero .images img {
-  width: 6rem;
-  height: 6rem;
-  border-radius: 50%;
-  box-shadow: 0rem 0.375rem 1.5rem 0rem rgba(140, 152, 164, 0.125);
-  display: none;
-}
-@media (min-width: 62.5rem) {
-  .hero .images img {
-    position: absolute;
-  }
-  .hero .images img:nth-child(1) {
-    bottom: -3rem;
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
-  .hero .images img:nth-child(2) {
-    bottom: 3rem;
-    left: -2rem;
-  }
-  .hero .images img:nth-child(3) {
-    bottom: 3rem;
-    right: -2rem;
-  }
-  .hero .images img:nth-child(4) {
-    top: -3rem;
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
-  .hero .images img:nth-child(5) {
-    top: 3rem;
-    left: -2rem;
-  }
-  .hero .images img:nth-child(6) {
-    top: 3rem;
-    right: -2rem;
   }
 }
 
@@ -258,7 +229,7 @@ body {
 @media (min-width: 62.5rem) {
   .section {
     padding: 5rem 0 5rem 0;
-    padding-block: 3rem;
+    padding-block: min(5vw, 5rem);
   }
 }
 .section:not(.hero) header:first-child {
@@ -303,7 +274,7 @@ body {
 @media (min-width: 62.5rem) {
   .banner {
     padding: 5rem 0 5rem 0;
-    padding-block: 3rem;
+    padding-block: min(5vw, 5rem);
   }
 }
 @media (min-width: 62.5rem) {
@@ -414,7 +385,7 @@ body {
   transition: all 0.125s ease-in-out;
   flex-basis: 100%;
 }
-@media (min-width: 600px) {
+@media (min-width: 37.5rem) {
   .card {
     flex: 1 1 22.5rem;
     max-width: 30rem;
