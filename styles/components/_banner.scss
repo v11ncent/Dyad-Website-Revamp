@@ -7,16 +7,11 @@
   margin-inline: 1rem;
   margin: 0 1rem 0 1rem; // fallback
   border-radius: tokens.$br-main;
+  background-color: tokens.$colors-brand-muted;
 
   @media (min-width: 62.5rem) {
-    margin-inline: min(3vw, 3rem);
     margin: 0 min(3vw, 3rem) 0 min(3vw, 3rem); // falback
-  }
-
-  .max-width {
-    background-color: tokens.$colors-brand-muted;
-    padding: 3rem 0 3rem 0; // fallback
-    padding-block: 3rem;
+    margin-inline: min(3vw, 3rem);
   }
 }
 

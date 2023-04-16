@@ -13,7 +13,6 @@
 
 .footer .navigation {
   @include mixins.flex(column, flex-start, center, 2rem);
-  border-bottom: 1px solid lightgrey;
   padding-bottom: 3rem;
 
   & > * {

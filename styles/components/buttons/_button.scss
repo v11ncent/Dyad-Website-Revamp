@@ -6,7 +6,7 @@
   @include mixins.button();
 }
 
-.button-primary {
+.button-1 {
   @extend %button;
   padding: 0.75rem 3rem;
   color: white;
@@ -18,7 +18,7 @@
   }
 }
 
-.button-secondary {
+.button-2 {
   @extend %button;
   color: tokens.$colors-brand;
   min-width: 100%;
@@ -28,7 +28,7 @@
   }
 }
 
-.button-tertiary {
+.button-3 {
   @extend %button;
   padding: 0.8125rem 1.25rem;
   color: tokens.$colors-paragraph;
@@ -41,9 +41,15 @@
   }
 }
 
-.button-popup {
+.button-4 {
   @extend %button;
   padding: 0.5rem 3rem;
   color: white;
   background-color: tokens.$colors-brand;
+}
+
+.button-5 {
+  text-decoration: none;
+  color: white;
+  border-bottom: 1.5px solid white;
 }
