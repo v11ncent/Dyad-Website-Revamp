@@ -11,6 +11,16 @@
 
     .content__container {
       @include mixins.flex(column, flex-start, space-between);
+
+      header {
+        min-width: 100%;
+
+        h2 {
+          @media (min-width: tokens.$bp-about) {
+            text-align: left;
+          }
+        }
+      }
     }
 
     .image__container {
@@ -27,12 +37,12 @@
         box-shadow: 0rem 0.375rem 1.5rem 0rem rgba(140, 152, 164, 0.125);
       }
 
-      @media (min-width: 75rem) {
+      @media (min-width: tokens.$bp-about) {
         max-height: 100%;
       }
     }
 
-    @media (min-width: 75rem) {
+    @media (min-width: tokens.$bp-about) {
       grid-template-columns: repeat(2, 1fr);
       gap: 5rem;
     }

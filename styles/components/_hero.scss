@@ -35,7 +35,7 @@
   }
 
   header {
-    @include mixins.header(true);
+    @include mixins.header();
   }
 
   .content__container {
