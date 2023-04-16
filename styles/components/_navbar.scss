@@ -20,7 +20,7 @@
 
     a {
       @include mixins.reset-anchor();
-      color: white;
+      color: black;
     }
 
     @media (min-width: 62.5rem) {

@@ -43,13 +43,13 @@
 
 .button-4 {
   @extend %button;
-  padding: 0.5rem 3rem;
-  color: white;
-  background-color: tokens.$colors-brand;
+  border-radius: 0;
+  color: tokens.$colors-brand;
+  background-color: white;
+  border-bottom: 1px solid tokens.$colors-brand;
 }
 
 .button-5 {
   text-decoration: none;
   color: white;
-  border-bottom: 1.5px solid white;
 }

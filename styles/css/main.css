@@ -64,8 +64,9 @@ body {
 
 .content-paragraph {
   color: rgba(0, 0, 0, 0.6);
-  margin: 0.5rem;
+  margin: 0.5rem 0 0.5rem 0;
   font-size: 1.125rem;
+  max-width: 70ch;
 }
 
 .logo {
@@ -114,7 +115,7 @@ body {
 .navbar nav > ul a {
   text-decoration: none;
   color: inherit;
-  color: white;
+  color: black;
 }
 @media (min-width: 62.5rem) {
   .navbar nav > ul {
@@ -137,27 +138,13 @@ body {
   position: relative;
   min-height: fit-content;
   text-align: left;
-  background: center/cover url("../../assets/hero.jpg");
-  color: white;
-}
-.hero::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  width: 100%;
-  height: 100%;
+  color: black;
 }
 .hero .buttons {
   font-size: 1.25rem;
 }
 .hero > * {
   z-index: 100;
-}
-@media (min-width: 62.5rem) {
-  .hero {
-    min-height: 80vh;
-  }
 }
 .hero .max-width {
   display: flex;
@@ -175,7 +162,7 @@ body {
 }
 .hero header,
 .hero .content {
-  max-width: 100ch;
+  max-width: 85ch;
 }
 .hero header {
   display: flex;
@@ -211,10 +198,12 @@ body {
 }
 .hero .content p {
   font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.85);
 }
 @media (min-width: 43.75rem) {
   .hero {
     text-align: center;
+    min-height: 80vh;
   }
 }
 .hero .images img {
@@ -269,7 +258,7 @@ body {
 @media (min-width: 62.5rem) {
   .section {
     padding: 5rem 0 5rem 0;
-    padding-block: 5rem;
+    padding-block: 3rem;
   }
 }
 .section:not(.hero) header:first-child {
@@ -309,11 +298,12 @@ body {
   margin: 0 1rem 0 1rem;
   border-radius: 0.25rem;
   background-color: #fff8f3;
+  display: none;
 }
 @media (min-width: 62.5rem) {
   .banner {
     padding: 5rem 0 5rem 0;
-    padding-block: 5rem;
+    padding-block: 3rem;
   }
 }
 @media (min-width: 62.5rem) {
@@ -361,8 +351,9 @@ body {
 }
 .stats > .stat .stat__description {
   color: rgba(0, 0, 0, 0.6);
-  margin: 0.5rem;
+  margin: 0.5rem 0 0.5rem 0;
   font-size: 1.125rem;
+  max-width: 70ch;
 }
 
 .partners .partners__list {
@@ -520,6 +511,9 @@ body {
 .footer .navigation header {
   margin-bottom: 0.5rem;
 }
+.footer .navigation header h3 {
+  font-weight: 500;
+}
 .footer .navigation ul {
   list-style-type: none;
   padding: 0;
@@ -574,7 +568,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.125rem;
+  gap: 0.75rem;
   flex-wrap: wrap;
   position: fixed;
   bottom: 0;
@@ -592,12 +586,16 @@ body {
 }
 .popup[open] h2 {
   line-height: 1;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 500;
 }
 .popup[open] p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: rgba(0, 0, 0, 0.6);
+  max-width: 40ch;
+}
+.popup[open] button {
+  font-size: 1rem;
 }
 @media (min-width: 50rem) {
   .popup[open] {
@@ -680,15 +678,15 @@ body {
 }
 
 .button-4 {
-  padding: 0.5rem 3rem;
-  color: white;
-  background-color: #f17a3a;
+  border-radius: 0;
+  color: #f17a3a;
+  background-color: white;
+  border-bottom: 1px solid #f17a3a;
 }
 
 .button-5 {
   text-decoration: none;
   color: white;
-  border-bottom: 1.5px solid white;
 }
 
 /*# sourceMappingURL=main.css.map */

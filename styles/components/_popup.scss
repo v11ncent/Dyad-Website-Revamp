@@ -2,7 +2,7 @@
 @use "../tokens/tokens" as tokens;
 
 .popup[open] {
-  @include mixins.flex(column, center, center, 1.125rem);
+  @include mixins.flex(column, center, center, 0.75rem);
   position: fixed;
   bottom: 0;
   left: 50%;
@@ -19,13 +19,18 @@
 
   h2 {
     line-height: 1;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 500;
   }
 
   p {
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: tokens.$colors-paragraph;
+    max-width: 40ch;
+  }
+
+  button {
+    font-size: 1rem;
   }
 
   @media (min-width: 50rem) {

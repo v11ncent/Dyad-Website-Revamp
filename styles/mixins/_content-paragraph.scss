@@ -2,6 +2,7 @@
 
 @mixin content-paragraph() {
   color: tokens.$colors-paragraph;
-  margin: 0.5rem;
+  margin: 0.5rem 0 0.5rem 0;
   font-size: clamp(1rem, 1.125rem, 1.25rem);
+  max-width: 70ch;
 }
