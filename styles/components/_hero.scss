@@ -8,6 +8,8 @@
 
   .max-width {
     @include mixins.flex(row, center, center);
+    // padding: 3rem 0 3rem 0; // fallback
+    // padding-block: 3rem;
     position: relative;
   }
 
@@ -31,7 +33,7 @@
 
   @media (min-width: tokens.$bp-hero) {
     text-align: center;
-    min-height: 60rem;
+    // min-height: 60rem;
   }
 
   .images img {
@@ -43,7 +45,7 @@
 
     @media (min-width: 62.5rem) {
       position: absolute;
-      display: block;
+      // display: block;
 
       &:nth-child(1) {
         bottom: -3rem;

@@ -3,5 +3,5 @@
 @mixin content-paragraph() {
   color: tokens.$colors-paragraph;
   margin: 0.5rem;
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 1.125rem, 1.25rem);
 }

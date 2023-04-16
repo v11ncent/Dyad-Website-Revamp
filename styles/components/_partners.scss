@@ -1,0 +1,14 @@
+@use "../mixins/mixins" as mixins;
+@use "../tokens/tokens" as tokens;
+
+.partners {
+  .partners__list {
+    @include mixins.reset-list();
+    @include mixins.flex(row, center, center, 5rem);
+
+    .partner {
+      @include mixins.flex(row, center, center);
+      flex-basis: 12.5rem;
+    }
+  }
+}

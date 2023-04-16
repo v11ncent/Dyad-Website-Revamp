@@ -16,6 +16,10 @@ body {
   @include mixins.content-paragraph();
 }
 
+.logo {
+  border-radius: 50%;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
