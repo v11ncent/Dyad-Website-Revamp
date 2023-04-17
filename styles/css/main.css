@@ -324,6 +324,7 @@ body {
     padding-block: min(5vw, 5rem);
   }
 }
+
 .banner .stats {
   list-style-type: none;
   padding: 0;
@@ -370,7 +371,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   gap: 5rem;
   flex-wrap: wrap;
 }
@@ -383,6 +384,16 @@ body {
   flex-wrap: wrap;
   flex-basis: 12.5rem;
   padding-block: 1rem;
+}
+@media (min-width: 68.75rem) {
+  .partners .partners__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+    flex-wrap: wrap;
+  }
 }
 
 .cards {

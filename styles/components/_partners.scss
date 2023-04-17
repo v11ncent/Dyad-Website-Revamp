@@ -4,12 +4,16 @@
 .partners {
   .partners__list {
     @include mixins.reset-list();
-    @include mixins.flex(row, center, space-evenly, 5rem);
+    @include mixins.flex(row, center, center, 5rem);
 
     .partner {
       @include mixins.flex(row, center, center);
       flex-basis: 12.5rem;
       padding-block: 1rem;
+    }
+
+    @media (min-width: 68.75rem) {
+      @include mixins.flex(row, center, space-between, 5rem);
     }
   }
 }
