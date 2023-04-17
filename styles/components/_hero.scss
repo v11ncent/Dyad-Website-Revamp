@@ -18,7 +18,10 @@
 
   .max-width {
     @include mixins.flex(row, center, center);
-    position: relative;
+
+    header {
+      margin-bottom: 2rem;
+    }
 
     @media (max-width: 62.5rem) {
       padding-top: 3rem;

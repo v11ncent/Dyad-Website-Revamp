@@ -151,7 +151,9 @@ body {
   justify-content: center;
   gap: 0;
   flex-wrap: wrap;
-  position: relative;
+}
+.hero .max-width header {
+  margin-bottom: 2rem;
 }
 @media (max-width: 62.5rem) {
   .hero .max-width {
