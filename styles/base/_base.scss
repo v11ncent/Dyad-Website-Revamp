@@ -5,6 +5,10 @@ body {
   font-family: tokens.$ff-main;
 }
 
+section {
+  // border: 1px dashed rebeccapurple;
+}
+
 .max-width {
   @include mixins.max-width();
   padding-inline: 1rem;

@@ -9,6 +9,7 @@
     .partner {
       @include mixins.flex(row, center, center);
       flex-basis: 12.5rem;
+      padding-block: 1rem;
     }
 
     @media (min-width: 62.5rem) {
