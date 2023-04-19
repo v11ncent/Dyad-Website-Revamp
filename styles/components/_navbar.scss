@@ -3,11 +3,9 @@
 
 .navbar {
   @include mixins.flex(row, center, center);
-  position: absolute;
   padding: 1rem 0 1rem 0; // fallback
   padding-block: 1rem;
   min-width: 100%;
-  z-index: 100;
   font-size: 1.25rem;
 
   nav {
@@ -20,10 +18,13 @@
 
     a {
       @include mixins.reset-anchor();
-      color: black;
+
+      &.button-1 {
+        color: white;
+      }
     }
 
-    @media (min-width: 62.5rem) {
+    @media (min-width: 40.625rem) {
       @include mixins.flex(row, center, center, 4rem);
     }
   }

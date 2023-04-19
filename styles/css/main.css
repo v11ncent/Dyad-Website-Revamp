@@ -49,8 +49,29 @@ h6 {
   isolation: isolate;
 }
 
+legend {
+  padding: 0;
+  display: table;
+}
+
+fieldset {
+  border: 0;
+  padding: 0.01em 0 0 0;
+  margin: 0;
+  min-width: 0;
+}
+
+body:not(:-moz-handler-blocked) fieldset {
+  display: table-cell;
+}
+
 /* This mixin is for call to action buttons/anchors
    Doesn't necessarily have to be a button */
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: "Inter", sans-serif;
 }
@@ -69,8 +90,13 @@ body {
 
 .logo {
   border-radius: 50%;
-  max-height: 4.5rem;
+  max-height: 3.5rem;
   border: 1px solid lightgrey;
+}
+@media (min-width: 62.5rem) {
+  .logo {
+    max-height: 4.5rem;
+  }
 }
 
 .sr-only {
@@ -92,11 +118,9 @@ body {
   justify-content: center;
   gap: 0;
   flex-wrap: wrap;
-  position: absolute;
   padding: 1rem 0 1rem 0;
   padding-block: 1rem;
   min-width: 100%;
-  z-index: 100;
   font-size: 1.25rem;
 }
 .navbar nav {
@@ -115,9 +139,11 @@ body {
 .navbar nav > ul a {
   text-decoration: none;
   color: inherit;
-  color: black;
 }
-@media (min-width: 62.5rem) {
+.navbar nav > ul a.button-1 {
+  color: white;
+}
+@media (min-width: 40.625rem) {
   .navbar nav > ul {
     display: flex;
     flex-direction: row;
@@ -152,15 +178,9 @@ body {
   justify-content: center;
   gap: 0;
   flex-wrap: wrap;
-  padding-top: 5rem;
 }
 .hero .max-width header {
   margin-bottom: 2rem;
-}
-@media (min-width: 62.5rem) {
-  .hero .max-width {
-    padding-top: 0;
-  }
 }
 .hero header,
 .hero .content__container {
@@ -298,7 +318,7 @@ body {
 }
 @media (min-width: 75rem) {
   .about .max-width .image__container {
-    max-height: 100%;
+    max-height: 32.5rem;
   }
 }
 @media (min-width: 75rem) {
@@ -329,8 +349,12 @@ body {
   }
 }
 .banner .max-width {
-  padding: 2rem 0 2rem 0;
-  padding-block: 2rem;
+  padding: 2rem;
+}
+@media (min-width: 87.5rem) {
+  .banner .max-width {
+    padding-inline: 0;
+  }
 }
 
 .banner .stats {

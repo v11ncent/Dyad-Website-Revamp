@@ -1,0 +1,20 @@
+@use "../base/reset";
+@use "../base/fonts";
+@use "../base/base";
+@use "../components/navbar";
+@use "../components/footer";
+@use "../components/buttons/buttons";
+@use "../components/buttons/button";
+@use "../components/form";
+@use "../mixins/mixins";
+@use "../tokens/tokens";
+
+.login {
+  @include mixins.flex(column, center, center);
+  min-height: 100%;
+
+  main {
+    @include mixins.flex(column, center, center);
+    flex: 1;
+  }
+}

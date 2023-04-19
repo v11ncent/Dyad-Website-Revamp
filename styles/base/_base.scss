@@ -1,9 +1,24 @@
 @use "../tokens/tokens" as tokens;
 @use "../mixins/mixins" as mixins;
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: tokens.$ff-main;
 }
+
+// .page {
+//   display: grid;
+//   grid-template-areas:
+//     "nav"
+//     "main"
+//     "footer";
+//   grid-template-rows: auto 1fr auto;
+//   height: 100%;
+// }
 
 .max-width {
   @include mixins.max-width();
@@ -18,8 +33,12 @@ body {
 
 .logo {
   border-radius: 50%;
-  max-height: 4.5rem;
+  max-height: 3.5rem;
   border: 1px solid lightgrey;
+
+  @media (min-width: 62.5rem) {
+    max-height: 4.5rem;
+  }
 }
 
 .sr-only {

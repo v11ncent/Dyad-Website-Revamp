@@ -4,7 +4,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/css/login.css" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <div class="login">
+      <header class="navbar">
+        <div class="max-width">
+          <nav>
+            <a href="">
+              <img
+                src="./assets/logo.png"
+                alt="Image of company logo."
+                class="logo"
+              />
+            </a>
+            <ul>
+              <li>
+                <a href="/landing.html">Home</a>
+              </li>
+              <li>
+                <a href="/instructions.html">Instructions</a>
+              </li>
+              <li>
+                <a href="/login.html" class="button-1">Login</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <form action="" method="POST" class="form form-login">
+          <fieldset class="form__fieldset">
+            <legend class="fieldset__legend sr-only">
+              Please enter the username associated with your account.
+            </legend>
+            <label for="username" class="fieldset__label">Username</label>
+            <input type="text" name="username" class="fieldset__input" />
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <legend class="form__legend sr-only">
+              Please enter the password associated with your account.
+            </legend>
+            <label for="name" class="fieldset__label">Password</label>
+            <input type="text" name="password" class="fieldset__input" />
+          </fieldset>
+          <button type="submit" class="button-1">Login</button>
+        </form>
+      </main>
+    </div>
+  </body>
 </html>

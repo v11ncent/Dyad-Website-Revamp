@@ -40,7 +40,7 @@
       }
 
       @media (min-width: tokens.$bp-about) {
-        max-height: 100%;
+        max-height: 32.5rem; // change this depending on height of content
       }
     }
 
