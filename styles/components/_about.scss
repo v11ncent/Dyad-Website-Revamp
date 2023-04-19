@@ -14,11 +14,12 @@
 
       header {
         min-width: 100%;
-        margin-bottom: 1rem;
+        margin-bottom: 1rem; // changed from default header mixin
 
         h2 {
           @media (min-width: tokens.$bp-about) {
             text-align: left;
+            align-self: flex-start;
           }
         }
       }

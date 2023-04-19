@@ -69,6 +69,8 @@ body {
 
 .logo {
   border-radius: 50%;
+  max-height: 4.5rem;
+  border: 1px solid lightgrey;
 }
 
 .sr-only {
@@ -133,7 +135,6 @@ body {
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-  position: relative;
   min-height: fit-content;
   text-align: left;
   color: black;
@@ -151,13 +152,14 @@ body {
   justify-content: center;
   gap: 0;
   flex-wrap: wrap;
+  padding-top: 5rem;
 }
 .hero .max-width header {
   margin-bottom: 2rem;
 }
-@media (max-width: 62.5rem) {
+@media (min-width: 62.5rem) {
   .hero .max-width {
-    padding-top: 3rem;
+    padding-top: 0;
   }
 }
 .hero header,
@@ -278,6 +280,7 @@ body {
 @media (min-width: 75rem) {
   .about .max-width .content__container header h2 {
     text-align: left;
+    align-self: flex-start;
   }
 }
 .about .max-width .image__container {
@@ -315,7 +318,8 @@ body {
   gap: 0;
   flex-wrap: wrap;
   border-radius: 0.25rem;
-  background-color: #fff8f3;
+  background-color: #f8f4fd;
+  margin: 0 1rem 0 1rem;
   margin-inline: 1rem;
 }
 @media (min-width: 62.5rem) {
@@ -323,6 +327,10 @@ body {
     padding: 5rem 0 5rem 0;
     padding-block: min(5vw, 5rem);
   }
+}
+.banner .max-width {
+  padding: 2rem 0 2rem 0;
+  padding-block: 2rem;
 }
 
 .banner .stats {
@@ -400,13 +408,13 @@ body {
   list-style-type: none;
   padding: 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 3rem;
   flex-wrap: wrap;
 }
-@media (min-width: 43.75rem) {
+@media (min-width: 65.625rem) {
   .cards {
     display: flex;
     flex-direction: row;
@@ -452,6 +460,16 @@ body {
 }
 .card .card__description {
   font-size: 1.125rem;
+  display: -webkit-box;
+  /* set the display type to box */
+  -webkit-line-clamp: 5;
+  /* set the maximum number of lines */
+  -webkit-box-orient: vertical;
+  /* set the orientation to vertical */
+  overflow: hidden;
+  /* hide the overflowing text */
+  text-overflow: ellipsis;
+  /* add ellipses if the text overflows */
 }
 
 .card.card-team {
@@ -472,7 +490,7 @@ body {
   justify-content: flex-start;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 .card.card-team .socials .social {
   text-decoration: none;
@@ -491,7 +509,7 @@ body {
 }
 
 .footer {
-  background-color: #fff8f3;
+  background-color: #f8f4fd;
   padding-top: 5rem;
 }
 @media (min-width: 62.5rem) {
@@ -666,7 +684,7 @@ body {
 .button-1 {
   padding: 0.75rem 3rem;
   color: white;
-  background-color: #f17a3a;
+  background-color: #662dbc;
   min-width: 100%;
 }
 @media (min-width: 43.75rem) {
@@ -676,7 +694,7 @@ body {
 }
 
 .button-2 {
-  color: #f17a3a;
+  color: #662dbc;
   min-width: 100%;
 }
 @media (min-width: 43.75rem) {
@@ -692,15 +710,15 @@ body {
   border-radius: 2rem;
 }
 .button-3 .highlight {
-  color: #f17a3a;
+  color: #662dbc;
   margin-left: 0.5rem;
 }
 
 .button-4 {
   border-radius: 0;
-  color: #f17a3a;
+  color: #662dbc;
   background-color: white;
-  border-bottom: 1px solid #f17a3a;
+  border-bottom: 1px solid #662dbc;
 }
 
 .button-5 {

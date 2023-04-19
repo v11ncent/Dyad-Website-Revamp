@@ -5,10 +5,6 @@ body {
   font-family: tokens.$ff-main;
 }
 
-section {
-  // border: 1px dashed rebeccapurple;
-}
-
 .max-width {
   @include mixins.max-width();
   padding-inline: 1rem;
@@ -19,8 +15,11 @@ section {
 .content-paragraph {
   @include mixins.content-paragraph();
 }
+
 .logo {
   border-radius: 50%;
+  max-height: 4.5rem;
+  border: 1px solid lightgrey;
 }
 
 .sr-only {

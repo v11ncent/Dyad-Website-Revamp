@@ -40,6 +40,11 @@
 
   .card__description {
     font-size: 1.125rem;
+    display: -webkit-box; /* set the display type to box */
+    -webkit-line-clamp: 5; /* set the maximum number of lines */
+    -webkit-box-orient: vertical; /* set the orientation to vertical */
+    overflow: hidden; /* hide the overflowing text */
+    text-overflow: ellipsis; /* add ellipses if the text overflows */
   }
 }
 
@@ -56,7 +61,7 @@
   .socials {
     @include mixins.reset-list();
     @include mixins.flex(row, center, flex-start, 1rem);
-    margin-top: 3rem;
+    margin-top: 2rem;
 
     .social {
       @include mixins.reset-anchor;
