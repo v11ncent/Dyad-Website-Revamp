@@ -1,7 +1,0 @@
-@use "../mixins/mixins" as mixins;
-@use "../tokens/tokens" as tokens;
-
-.section {
-  @include mixins.section();
-  @include mixins.flex(column, center, center, 1);
-}

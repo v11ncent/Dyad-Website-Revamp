@@ -1,5 +1,5 @@
-@use "../mixins/mixins" as mixins;
-@use "../tokens/tokens" as tokens;
+@use "../../mixins/mixins" as mixins;
+@use "../../tokens/tokens" as tokens;
 
 .popup[open] {
   @include mixins.flex(column, center, center, 0.75);

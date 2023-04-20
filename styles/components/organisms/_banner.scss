@@ -1,5 +1,5 @@
-@use "../mixins/mixins" as mixins;
-@use "../tokens/tokens" as tokens;
+@use "../../mixins/mixins" as mixins;
+@use "../../tokens/tokens" as tokens;
 
 .banner {
   @include mixins.section();
@@ -34,9 +34,5 @@
     font-size: 3.5rem;
     font-weight: 500;
     line-height: 1;
-  }
-
-  .stat__description {
-    @include mixins.content-paragraph();
   }
 }

@@ -1,0 +1,5 @@
+@use "../../mixins/mixins";
+
+.container {
+  @include mixins.container();
+}
