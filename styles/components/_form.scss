@@ -9,7 +9,7 @@
     min-width: 100%;
   }
 
-  &__fieldset {
+  &__field {
     @include mixins.flex(column, center, center, 0.5rem);
 
     .fieldset__label {
