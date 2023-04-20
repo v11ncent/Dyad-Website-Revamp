@@ -1,10 +1,11 @@
-@use "./flex" as *;
-
 /**
  * Sets container styling for a page.
  * 
  * @param {string} $type - The type of page. (generic, landing, login)
  */
+
+@use "../tokens/tokens" as tokens;
+@use "./flex" as *;
 
 @mixin page($type) {
   @if $type == generic {
