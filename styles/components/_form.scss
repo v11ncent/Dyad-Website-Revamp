@@ -5,21 +5,19 @@
   @include mixins.flex(column, center, center);
   gap: 1.5rem;
 
-  & * {
-    min-width: 100%;
-  }
-
   &__field {
     @include mixins.flex(column, center, center, 0.5rem);
+    min-width: 100%;
 
-    .fieldset__label {
+    .field__label {
       align-self: start;
     }
 
-    .fieldset__input {
+    .field__input {
       padding: 0.5rem;
       border: 1px solid lightgrey;
       border-radius: tokens.$br-main;
+      min-width: 100%;
 
       &:focus {
         outline: 2px solid tokens.$colors-brand;

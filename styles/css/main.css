@@ -51,6 +51,11 @@ h6 {
 
 /* This mixin is for call to action buttons/anchors
    Doesn't necessarily have to be a button */
+/**
+ * Sets container styling for a page.
+ * 
+ * @param {string} $type - The type of page. (generic, landing, login)
+ */
 html,
 body {
   height: 100%;

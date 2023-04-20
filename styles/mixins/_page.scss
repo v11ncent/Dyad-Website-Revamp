@@ -1,0 +1,46 @@
+@use "./flex" as *;
+
+/**
+ * Sets container styling for a page.
+ * 
+ * @param {string} $type - The type of page. (generic, landing, login)
+ */
+
+@mixin page($type) {
+  @if $type == generic {
+    @include flex(column, auto, auto);
+    min-height: 100%;
+
+    .content {
+      @include flex(column, center, center);
+      flex: 1;
+      min-height: 50vh;
+
+      @media (min-width: 62.5rem) {
+        min-height: auto;
+      }
+    }
+  }
+
+  @if $type == login {
+    display: grid;
+    min-height: 100%;
+
+    .content {
+      @include flex(column, center, center);
+    }
+
+    .side-content {
+      display: none;
+      background-color: tokens.$colors-brand;
+
+      @media (min-width: tokens.$bp-login-form) {
+        display: block;
+      }
+    }
+
+    @media (min-width: tokens.$bp-login-form) {
+      grid-template-columns: 60% 40%;
+    }
+  }
+}

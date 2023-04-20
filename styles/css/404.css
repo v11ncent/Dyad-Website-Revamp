@@ -52,6 +52,11 @@ h6 {
 
 /* This mixin is for call to action buttons/anchors
    Doesn't necessarily have to be a button */
+/**
+ * Sets container styling for a page.
+ * 
+ * @param {string} $type - The type of page. (generic, landing, login)
+ */
 html,
 body {
   height: 100%;
@@ -254,36 +259,6 @@ body {
   }
 }
 
-.buttons-hero {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-  min-width: 100%;
-}
-@media (min-width: 43.75rem) {
-  .buttons-hero {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-}
-.buttons-section {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  flex-wrap: wrap;
-  margin-top: 3rem;
-}
-
 .button-4, .button-3, .button-2, .button-1 {
   text-decoration: none;
   color: inherit;
@@ -339,72 +314,29 @@ body {
   color: white;
 }
 
-.form {
+.page {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: auto;
+  justify-content: auto;
   gap: 0;
   flex-wrap: wrap;
-  gap: 1.5rem;
-}
-.form__field {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  min-width: 100%;
-}
-.form__field .field__label {
-  align-self: start;
-}
-.form__field .field__input {
-  padding: 0.5rem;
-  border: 1px solid lightgrey;
-  border-radius: 0.25rem;
-  min-width: 100%;
-}
-.form__field .field__input:focus {
-  outline: 2px solid #662dbc;
-}
-.form button[type=submit] {
-  margin-top: 1rem;
-  min-width: 100%;
-}
-
-@media (min-width: 62.5rem) {
-  .form-login {
-    min-width: 30rem;
-  }
-}
-
-.login {
-  display: grid;
   min-height: 100%;
 }
-.login main {
+.page .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0;
   flex-wrap: wrap;
-}
-.login aside {
-  display: none;
-  background-color: #662dbc;
+  flex: 1;
+  min-height: 50vh;
 }
 @media (min-width: 62.5rem) {
-  .login aside {
-    display: block;
-  }
-}
-@media (min-width: 62.5rem) {
-  .login {
-    grid-template-columns: 60% 40%;
+  .page .content {
+    min-height: auto;
   }
 }
 
-/*# sourceMappingURL=login.css.map */
+/*# sourceMappingURL=404.css.map */

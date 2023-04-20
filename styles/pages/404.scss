@@ -1,0 +1,11 @@
+@use "../base/reset";
+@use "../base/fonts";
+@use "../base/base";
+@use "../components/navbar";
+@use "../components/footer";
+@use "../components/buttons/button";
+@use "../mixins/mixins";
+
+.page {
+  @include mixins.page(generic);
+}

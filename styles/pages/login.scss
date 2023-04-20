@@ -1,32 +1,10 @@
 @use "../base/reset";
 @use "../base/fonts";
 @use "../base/base";
-@use "../components/navbar";
-@use "../components/footer";
-@use "../components/buttons/buttons";
-@use "../components/buttons/button";
 @use "../components/form";
 @use "../tokens/tokens";
 @use "../mixins/mixins";
 
-.login {
-  display: grid;
-  min-height: 100%;
-
-  main {
-    @include mixins.flex(column, center, center);
-  }
-
-  aside {
-    display: none;
-    background-color: tokens.$colors-brand;
-
-    @media (min-width: tokens.$bp-login-form) {
-      display: block;
-    }
-  }
-
-  @media (min-width: tokens.$bp-login-form) {
-    grid-template-columns: 60% 40%;
-  }
+.page {
+  @include mixins.page(login);
 }
