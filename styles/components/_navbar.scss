@@ -25,7 +25,7 @@
     }
 
     @media (min-width: 40.625rem) {
-      @include mixins.flex(row, center, center, 4rem);
+      @include mixins.flex(row, center, center, 4);
     }
   }
 }

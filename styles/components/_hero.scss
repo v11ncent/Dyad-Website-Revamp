@@ -2,56 +2,25 @@
 @use "../tokens/tokens" as tokens;
 
 .hero {
-  @include mixins.flex(row, center, center, 1rem);
-  min-height: fit-content;
+  @include mixins.flex(row, center, center, 1);
   text-align: left;
-  color: black;
+  font-size: 1.25rem;
 
-  h1 {
-    font-size: clamp(2.75rem, 3.125vw, 3.5rem);
-    font-weight: 600;
-  }
+  .container {
+    @include mixins.max-width();
+    @include mixins.flex(column, center, center, 2);
 
-  .buttons {
-    font-size: 1.25rem;
-  }
-
-  & > * {
-    z-index: 100;
-  }
-
-  .max-width {
-    @include mixins.flex(row, center, center);
-
-    header {
-      margin-bottom: 2rem;
+    .heading {
+      font-size: clamp(2.75rem, 3.125vw, 3.5rem);
+      font-weight: 600;
+      line-height: 1;
     }
-  }
 
-  header,
-  .content__container {
-    max-width: 85ch;
-
-    @media (min-width: 90.625rem) {
-      max-width: 100ch;
-    }
-  }
-
-  header {
-    @include mixins.header();
-  }
-
-  .content__container {
-    @include mixins.flex(column, center, center);
-
-    p {
+    .description {
       font-size: 1.5rem;
-      color: rgb(0, 0, 0, 0.85);
+      max-width: 60ch;
+      color: tokens.$colors-paragraph;
     }
-  }
-
-  img {
-    display: none;
   }
 
   @media (min-width: tokens.$bp-hero) {

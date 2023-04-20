@@ -6,7 +6,6 @@
   @include mixins.flex(row, center, center);
   border-radius: tokens.$br-main;
   background-color: tokens.$colors-brand-muted;
-  margin: 0 1rem 0 1rem; // fallback
   margin-inline: 1rem;
 
   .max-width {
@@ -20,11 +19,11 @@
 
 .banner .stats {
   @include mixins.reset-list;
-  @include mixins.flex(column, center, center, 5rem);
+  @include mixins.flex(column, center, center, 5);
   text-align: center;
 
   @media (min-width: 53.125rem) {
-    @include mixins.flex(row, center, space-between, 5rem);
+    @include mixins.flex(row, center, space-between, 5);
   }
 }
 

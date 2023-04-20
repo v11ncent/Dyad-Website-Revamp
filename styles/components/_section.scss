@@ -3,5 +3,5 @@
 
 .section {
   @include mixins.section();
-  @include mixins.flex(column, center, center, 1rem);
+  @include mixins.flex(column, center, center, 1);
 }

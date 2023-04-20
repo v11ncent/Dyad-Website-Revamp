@@ -60,7 +60,7 @@
 
   .socials {
     @include mixins.reset-list();
-    @include mixins.flex(row, center, flex-start, 1rem);
+    @include mixins.flex(row, center, flex-start, 1);
     margin-top: 2rem;
 
     .social {

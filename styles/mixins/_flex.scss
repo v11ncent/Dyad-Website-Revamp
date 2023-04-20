@@ -1,8 +1,17 @@
+/**
+ * Sets the element's display property to flex.
+ * 
+ * @param {string} $direction - The direction of the flex element. (row, column)
+ * @param {string} $alignItems - The alignment of items in either the x or y axis. (flex-start, center, space-between)
+ * @param {string} $justifyContent - The alignment of items in either the x or y axis. (flex-start, center, space-between)
+ * @param {number} $gap - The gap between child elements. (any number)
+ */
+
 @mixin flex($direction, $alignItems, $justifyContent, $gap: 0) {
   display: flex;
   flex-direction: $direction;
   align-items: $alignItems;
   justify-content: $justifyContent;
-  gap: $gap;
+  gap: #{$gap}rem;
   flex-wrap: wrap;
 }

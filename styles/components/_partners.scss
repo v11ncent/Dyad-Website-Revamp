@@ -4,7 +4,7 @@
 .partners {
   .partners__list {
     @include mixins.reset-list();
-    @include mixins.flex(row, center, center, 5rem);
+    @include mixins.flex(row, center, center, 5);
 
     .partner {
       @include mixins.flex(row, center, center);
@@ -13,7 +13,7 @@
     }
 
     @media (min-width: 68.75rem) {
-      @include mixins.flex(row, center, space-between, 5rem);
+      @include mixins.flex(row, center, space-between, 5);
     }
   }
 }

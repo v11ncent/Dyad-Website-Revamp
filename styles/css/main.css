@@ -49,6 +49,14 @@ h6 {
   isolation: isolate;
 }
 
+/**
+ * Sets the element's display property to flex.
+ * 
+ * @param {string} $direction - The direction of the flex element. (row, column)
+ * @param {string} $alignItems - The alignment of items in either the x or y axis. (flex-start, center, space-between)
+ * @param {string} $justifyContent - The alignment of items in either the x or y axis. (flex-start, center, space-between)
+ * @param {number} $gap - The gap between child elements. (any number)
+ */
 /* This mixin is for call to action buttons/anchors
    Doesn't necessarily have to be a button */
 /**
@@ -67,6 +75,7 @@ body {
 
 .max-width {
   max-width: 81.25rem;
+  padding-inline: 1rem;
   padding: 0 1rem 0 1rem;
   padding-inline: 1rem;
   flex: 1;
@@ -128,7 +137,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 0;
+  gap: 0rem;
   flex-wrap: wrap;
   padding: 1rem 0 1rem 0;
   padding-block: 1rem;
@@ -140,7 +149,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 0;
+  gap: 0rem;
   flex-wrap: wrap;
 }
 .navbar nav > ul {
@@ -173,77 +182,28 @@ body {
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-  min-height: fit-content;
   text-align: left;
-  color: black;
-}
-.hero h1 {
-  font-size: clamp(2.75rem, 3.125vw, 3.5rem);
-  font-weight: 600;
-}
-.hero .buttons {
   font-size: 1.25rem;
 }
-.hero > * {
-  z-index: 100;
-}
-.hero .max-width {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  flex-wrap: wrap;
-}
-.hero .max-width header {
-  margin-bottom: 2rem;
-}
-.hero header,
-.hero .content__container {
-  max-width: 85ch;
-}
-@media (min-width: 90.625rem) {
-  .hero header,
-.hero .content__container {
-    max-width: 100ch;
-  }
-}
-.hero header {
+.hero .container {
+  max-width: 81.25rem;
+  padding-inline: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  line-height: 1.25;
-  margin-bottom: 2rem;
-}
-.hero header h2 {
-  font-size: 1.75rem;
-  font-weight: 500;
-  text-align: center;
-}
-.hero header p {
-  color: rgba(0, 0, 0, 0.6);
-}
-@media (min-width: 62.5rem) {
-  .hero header {
-    margin-bottom: 4rem;
-  }
-}
-.hero .content__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
+  gap: 2rem;
   flex-wrap: wrap;
 }
-.hero .content__container p {
+.hero .container .heading {
+  font-size: clamp(2.75rem, 3.125vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1;
+}
+.hero .container .description {
   font-size: 1.5rem;
-  color: rgba(0, 0, 0, 0.85);
-}
-.hero img {
-  display: none;
+  max-width: 60ch;
+  color: rgba(0, 0, 0, 0.6);
 }
 @media (min-width: 43.75rem) {
   .hero {
@@ -282,7 +242,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 0;
+  gap: 0rem;
   flex-wrap: wrap;
 }
 .about .max-width .content__container header {
@@ -327,11 +287,10 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 0;
+  gap: 0rem;
   flex-wrap: wrap;
   border-radius: 0.25rem;
   background-color: #f8f4fd;
-  margin: 0 1rem 0 1rem;
   margin-inline: 1rem;
 }
 @media (min-width: 62.5rem) {
@@ -376,7 +335,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0;
+  gap: 0rem;
   flex-wrap: wrap;
 }
 .stats > .stat .stat__heading {
@@ -404,7 +363,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 0;
+  gap: 0rem;
   flex-wrap: wrap;
   flex-basis: 12.5rem;
   padding-block: 1rem;
@@ -427,17 +386,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 2.5rem;
   flex-wrap: wrap;
 }
 @media (min-width: 65.625rem) {
   .cards {
-    display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
   }
 }
 
@@ -534,7 +488,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 0;
+    gap: 0rem;
     flex-wrap: wrap;
   }
 }
@@ -599,11 +553,10 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 0;
+  gap: 0rem;
   flex-wrap: wrap;
-  padding: 3rem 0 3rem 0;
-  padding-block: 3rem;
   color: rgba(0, 0, 0, 0.6);
+  padding-block: 3rem;
 }
 @media (min-width: 62.5rem) {
   .footer .copyright {
@@ -611,7 +564,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 0;
+    gap: 0rem;
     flex-wrap: wrap;
   }
 }
@@ -664,7 +617,6 @@ body {
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-top: 2rem;
   min-width: 100%;
 }
 @media (min-width: 43.75rem) {
@@ -682,7 +634,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 0;
+  gap: 0rem;
   flex-wrap: wrap;
   margin-top: 3rem;
 }
