@@ -2,30 +2,44 @@
 @use "../../tokens/tokens";
 
 %container {
-  // base styling
+  // base styles
+
+  &-hero {
+  }
 
   &-section {
-    @include mixins.container();
   }
 
   &-buttons {
-    @include mixins.flex(row, center, center, 1);
-    min-width: 100%;
-
-    @media (min-width: tokens.$bp-hero) {
-      @include mixins.flex(row, center, center, 2);
-    }
   }
 }
 
 .container {
   @extend %container;
 
+  &-navigation {
+    @extend %container;
+    @include mixins.container();
+    @include mixins.flex(row, center, center);
+  }
+
+  &-hero {
+    @extend %container;
+    @include mixins.container();
+    @include mixins.flex(column, center, center, 2);
+  }
+
   &-section {
-    @extend %container-section;
+    @extend %container;
+    @include mixins.container();
   }
 
   &-buttons {
-    @extend %container-buttons;
+    @extend %container;
+    @include mixins.flex(row, center, center, 1);
+
+    @media (min-width: tokens.$bp-hero) {
+      @include mixins.flex(row, center, center, 2);
+    }
   }
 }

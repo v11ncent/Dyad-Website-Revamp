@@ -2,21 +2,18 @@
 @use "../../tokens/tokens" as tokens;
 
 %list {
-  // base styling
-
-  &-reset {
-    @include mixins.reset-list();
-  }
-
-  &-nav {
-    @include mixins.reset-list();
-  }
+  @include mixins.reset-list();
 }
 
 .list {
   @extend %list;
 
-  &-nav {
-    @extend %list-nav;
+  &-navigation {
+    @extend %list;
+    display: none;
+
+    @media (min-width: tokens.$bp-main-nav) {
+      @include mixins.flex(row, center, center, 4);
+    }
   }
 }

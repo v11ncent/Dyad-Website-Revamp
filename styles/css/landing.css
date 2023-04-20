@@ -103,28 +103,60 @@ body {
   cursor: pointer;
 }
 
-.links-cta {
+.heading-main {
+  font-size: clamp(2.75rem, 3.125vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.link-no-underline, .link-rounded, .link-brand, .link-cta, .link {
+  color: inherit;
+}
+
+.link-cta {
   padding: 0.75rem 3rem;
   border-radius: 0.25rem;
   background-color: #662dbc;
   text-decoration: none;
   color: white;
 }
-.links-rounded {
+.link-brand {
+  color: #662dbc;
+}
+.link-rounded {
   padding: 0.8125rem 1.25rem;
   border-radius: 2rem;
 }
-.links-no-underline {
+.link-no-underline {
   text-decoration: none;
 }
 
-.list-nav {
+.paragraph-hero {
+  max-width: 60ch;
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.list-navigation, .list {
   list-style-type: none;
   padding: 0;
 }
 
+.list-navigation {
+  display: none;
+}
+@media (min-width: 40.625rem) {
+  .list-navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
+}
+
 .card {
-  color: rgba(0, 0, 0, 0.6);
   border-radius: 0.25rem;
   background-color: white;
   transition: all 0.125s ease-in-out;
@@ -205,6 +237,28 @@ body {
   border-radius: 0.25rem;
 }
 
+.container-navigation {
+  max-width: 81.25rem;
+  padding-inline: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+  flex-wrap: wrap;
+}
+.container-hero {
+  max-width: 81.25rem;
+  padding-inline: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
 .container-section {
   max-width: 81.25rem;
   padding-inline: 1rem;
@@ -217,7 +271,6 @@ body {
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-  min-width: 100%;
 }
 @media (min-width: 43.75rem) {
   .container-buttons {
@@ -230,40 +283,16 @@ body {
   }
 }
 
-.navbar-main {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 0rem;
-  flex-wrap: wrap;
-  padding-block: 1rem;
-  font-size: 1.25rem;
-  color: #662dbc;
-}
-.navbar-main .button-cta {
-  color: white;
-}
-.navbar-main .navigation {
+.navigation-main {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 0rem;
   flex-wrap: wrap;
-}
-.navbar-main .list-nav {
-  display: none;
-}
-@media (min-width: 40.625rem) {
-  .navbar-main .list-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 4rem;
-    flex-wrap: wrap;
-  }
+  padding-block: 1rem;
+  font-size: 1.25rem;
+  flex: 1;
 }
 
 .hero {
@@ -288,11 +317,6 @@ body {
   font-size: clamp(2.75rem, 3.125vw, 3.5rem);
   font-weight: 600;
   line-height: 1;
-}
-.hero .container .description {
-  font-size: 1.5rem;
-  max-width: 60ch;
-  color: rgba(0, 0, 0, 0.6);
 }
 @media (min-width: 43.75rem) {
   .hero {
@@ -505,10 +529,6 @@ body {
   gap: 0.75rem;
   flex-wrap: wrap;
 }
-.footer .navigation a {
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.6);
-}
 .footer .navigation .contact img {
   margin-bottom: 2rem;
 }
@@ -539,7 +559,6 @@ body {
   justify-content: flex-start;
   gap: 0rem;
   flex-wrap: wrap;
-  color: rgba(0, 0, 0, 0.6);
   padding-block: 3rem;
 }
 @media (min-width: 62.5rem) {
@@ -579,11 +598,6 @@ body {
   font-size: 1.25rem;
   font-weight: 500;
 }
-.popup[open] p {
-  font-size: 1rem;
-  color: rgba(0, 0, 0, 0.6);
-  max-width: 40ch;
-}
 .popup[open] button {
   font-size: 1rem;
 }
@@ -592,6 +606,19 @@ body {
     min-width: fit-content;
     margin-bottom: 1rem;
   }
+}
+
+/*
+ * This is the complex version of the headers component.
+ * Used mainly for navigation, where multiple molecules can be stored.
+ */
+.header-complex-navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+  flex-wrap: wrap;
 }
 
 /*# sourceMappingURL=landing.css.map */
