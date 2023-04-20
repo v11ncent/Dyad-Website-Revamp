@@ -1,10 +1,12 @@
 @use "../base/reset";
 @use "../base/base";
 @use "../mixins/mixins";
-@use "../components/atoms/button";
-@use "../components/molecules/buttons";
+@use "../components/atoms/buttons";
+@use "../components/atoms/links";
+@use "../components/molecules/lists";
 @use "../components/molecules/card";
-@use "../components/organisms/navbar";
+@use "../components/molecules/containers";
+@use "../components/organisms/navigation";
 @use "../components/organisms/hero";
 @use "../components/organisms/about";
 @use "../components/organisms/banner";

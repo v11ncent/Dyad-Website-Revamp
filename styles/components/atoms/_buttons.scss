@@ -1,0 +1,10 @@
+@use "../../tokens/tokens" as tokens;
+@use "../../mixins/mixins" as mixins;
+
+%button {
+  @include mixins.button();
+}
+
+.button {
+  @extend %button;
+}

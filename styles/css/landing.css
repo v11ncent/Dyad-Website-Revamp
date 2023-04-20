@@ -56,6 +56,7 @@ h6 {
  * @param {string} $alignItems - The alignment of items in either the x or y axis. (flex-start, center, space-between)
  * @param {string} $justifyContent - The alignment of items in either the x or y axis. (flex-start, center, space-between)
  * @param {number} $gap - The gap between child elements. (any number)
+ * @param {number} $wrap - Whether the flex element wraps or not. (boolean)
  */
 /* This mixin is for call to action buttons/anchors
    Doesn't necessarily have to be a button */
@@ -96,79 +97,30 @@ body {
   border-width: 0;
 }
 
-.button-4, .button-3, .button-2, .button-1 {
-  text-decoration: none;
-  color: inherit;
+.button {
   font-weight: 500;
   border: transparent;
-  border-radius: 0.25rem;
-  text-align: center;
   cursor: pointer;
 }
 
-.button-1 {
+.links-cta {
   padding: 0.75rem 3rem;
-  color: white;
+  border-radius: 0.25rem;
   background-color: #662dbc;
-  min-width: 100%;
-}
-@media (min-width: 43.75rem) {
-  .button-1 {
-    min-width: fit-content;
-  }
-}
-
-.button-2 {
-  color: #662dbc;
-  min-width: 100%;
-}
-@media (min-width: 43.75rem) {
-  .button-2 {
-    min-width: fit-content;
-  }
-}
-
-.button-3 {
-  padding: 0.8125rem 1.25rem;
-  color: rgba(0, 0, 0, 0.6);
-  border: 1px solid lightgrey;
-  border-radius: 2rem;
-}
-.button-3 .highlight {
-  color: #662dbc;
-  margin-left: 0.5rem;
-}
-
-.button-4 {
-  border-radius: 0;
-  color: #662dbc;
-  background-color: white;
-  border-bottom: 1px solid #662dbc;
-}
-
-.button-5 {
   text-decoration: none;
   color: white;
 }
-
-.buttons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  min-width: 100%;
+.links-rounded {
+  padding: 0.8125rem 1.25rem;
+  border-radius: 2rem;
 }
-@media (min-width: 43.75rem) {
-  .buttons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
+.links-no-underline {
+  text-decoration: none;
+}
+
+.list-nav {
+  list-style-type: none;
+  padding: 0;
 }
 
 .card {
@@ -240,7 +192,6 @@ body {
 }
 .card.card-team .socials .social {
   text-decoration: none;
-  color: inherit;
   padding: 0.25rem;
   max-width: 1.75rem;
   border: 1px solid lightgrey;
@@ -254,19 +205,46 @@ body {
   border-radius: 0.25rem;
 }
 
-.navbar {
+.container-section {
+  max-width: 81.25rem;
+  padding-inline: 1rem;
+  flex: 1;
+}
+.container-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  min-width: 100%;
+}
+@media (min-width: 43.75rem) {
+  .container-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+}
+
+.navbar-main {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 0rem;
   flex-wrap: wrap;
-  padding: 1rem 0 1rem 0;
   padding-block: 1rem;
-  min-width: 100%;
   font-size: 1.25rem;
+  color: #662dbc;
 }
-.navbar nav {
+.navbar-main .button-cta {
+  color: white;
+}
+.navbar-main .navigation {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -274,20 +252,11 @@ body {
   gap: 0rem;
   flex-wrap: wrap;
 }
-.navbar nav > ul {
-  list-style-type: none;
-  padding: 0;
+.navbar-main .list-nav {
   display: none;
 }
-.navbar nav > ul a {
-  text-decoration: none;
-  color: inherit;
-}
-.navbar nav > ul a.button-1 {
-  color: white;
-}
 @media (min-width: 40.625rem) {
-  .navbar nav > ul {
+  .navbar-main .list-nav {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -538,7 +507,6 @@ body {
 }
 .footer .navigation a {
   text-decoration: none;
-  color: inherit;
   color: rgba(0, 0, 0, 0.6);
 }
 .footer .navigation .contact img {

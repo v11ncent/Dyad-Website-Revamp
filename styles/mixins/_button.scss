@@ -6,7 +6,5 @@
 @mixin button() {
   font-weight: 500;
   border: transparent;
-  border-radius: tokens.$br-main;
-  text-align: center;
   cursor: pointer;
 }

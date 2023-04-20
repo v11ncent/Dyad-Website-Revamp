@@ -1,0 +1,39 @@
+@use "../../tokens/tokens" as tokens;
+@use "../../mixins/mixins" as mixins;
+
+%links {
+  // base styles
+
+  &-cta {
+    padding: 0.75rem 3rem;
+    border-radius: tokens.$br-main;
+    background-color: tokens.$colors-brand;
+    text-decoration: none;
+    color: white;
+  }
+
+  &-rounded {
+    padding: 0.8125rem 1.25rem;
+    border-radius: 2rem;
+  }
+
+  &-no-underline {
+    @include mixins.reset-anchor();
+  }
+}
+
+.links {
+  @extend %links;
+
+  &-cta {
+    @extend %links-cta;
+  }
+
+  &-rounded {
+    @extend %links-rounded;
+  }
+
+  &-no-underline {
+    @extend %links-no-underline;
+  }
+}
