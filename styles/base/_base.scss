@@ -10,21 +10,15 @@ body {
   font-family: tokens.$ff-main;
 }
 
-// .page {
-//   display: grid;
-//   grid-template-areas:
-//     "nav"
-//     "main"
-//     "footer";
-//   grid-template-rows: auto 1fr auto;
-//   height: 100%;
-// }
-
 .max-width {
   @include mixins.max-width();
-  padding-inline: 1rem;
   padding: 0 1rem 0 1rem; // fallback
+  padding-inline: 1rem;
   flex: 1;
+}
+
+.section__header {
+  @include mixins.header();
 }
 
 .content-paragraph {

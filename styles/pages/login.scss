@@ -6,15 +6,27 @@
 @use "../components/buttons/buttons";
 @use "../components/buttons/button";
 @use "../components/form";
-@use "../mixins/mixins";
 @use "../tokens/tokens";
+@use "../mixins/mixins";
 
 .login {
-  @include mixins.flex(column, center, center);
+  display: grid;
   min-height: 100%;
 
   main {
     @include mixins.flex(column, center, center);
-    flex: 1;
+  }
+
+  aside {
+    display: none;
+    background-color: tokens.$colors-brand;
+
+    @media (min-width: tokens.$bp-login-form) {
+      display: block;
+    }
+  }
+
+  @media (min-width: tokens.$bp-login-form) {
+    grid-template-columns: 60% 40%;
   }
 }
