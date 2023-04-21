@@ -16,4 +16,9 @@
     object-position: top;
     border-radius: tokens.$br-main;
   }
+
+  &-partner {
+    @extend %image;
+    max-width: 12.5rem;
+  }
 }

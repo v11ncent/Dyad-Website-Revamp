@@ -27,4 +27,13 @@
       @include mixins.flex(row, center, space-between);
     }
   }
+
+  &-partners {
+    @extend %list;
+    @include mixins.flex(row, center, center, 7, wrap);
+
+    @media (min-width: 75rem) {
+      @include mixins.flex(row, center, space-between, 7, wrap);
+    }
+  }
 }
