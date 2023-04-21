@@ -1,0 +1,25 @@
+@use "../../mixins/mixins" as mixins;
+@use "../../tokens/tokens" as tokens;
+
+%section {
+  @include mixins.section();
+}
+
+.section {
+  @extend %section;
+
+  &-hero {
+    @include mixins.flex(row, center, center, 1);
+    text-align: left;
+    font-size: 1.25rem;
+
+    @media (min-width: tokens.$bp-hero) {
+      text-align: center;
+      min-height: 80vh;
+    }
+  }
+
+  &-about {
+    @extend %section;
+  }
+}

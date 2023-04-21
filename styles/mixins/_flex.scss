@@ -8,11 +8,16 @@
  * @param {number} $wrap - Whether the flex element wraps or not. (boolean)
  */
 
-@mixin flex($direction, $alignItems, $justifyContent, $gap: 0, $wrap: true) {
+@mixin flex($direction, $alignItems, $justifyContent, $gap: 0, $wrap: false) {
   display: flex;
   flex-direction: $direction;
   align-items: $alignItems;
   justify-content: $justifyContent;
   gap: #{$gap}rem;
-  flex-wrap: wrap;
+
+  @if $wrap {
+    flex-wrap: wrap;
+  } @else {
+    flex-wrap: nowrap;
+  }
 }

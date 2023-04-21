@@ -2,19 +2,20 @@
 @use "../../mixins/mixins" as mixins;
 
 %heading {
-  // base styling
-
-  &-main {
-    font-size: clamp(2.75rem, 3.125vw, 3.5rem);
-    font-weight: 600;
-    line-height: 1;
-  }
+  // base styles
 }
 
 .heading {
   @extend %heading;
 
   &-main {
-    @extend %heading-main;
+    font-size: clamp(2.75rem, 3.125vw, 3.5rem);
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  &-section {
+    font-size: 1.75rem;
+    font-weight: 500;
   }
 }

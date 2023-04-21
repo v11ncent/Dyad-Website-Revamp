@@ -5,3 +5,15 @@
  * This is the simpler version of the headers component.
  * Used mainly for cards and introductory content that contains simple atoms.
  */
+
+%header-simple {
+  // base styles
+}
+
+.header-simple {
+  @extend %header-simple;
+
+  &-section {
+    margin-bottom: 1rem;
+  }
+}

@@ -5,11 +5,12 @@
 @use "../components/atoms/headings";
 @use "../components/atoms/links";
 @use "../components/atoms/paragraphs";
+@use "../components/atoms/images";
 @use "../components/molecules/lists";
 @use "../components/molecules/card";
 @use "../components/molecules/containers";
 @use "../components/molecules/navigation";
-@use "../components/organisms/hero";
+@use "../components/molecules/headers-simple";
 @use "../components/organisms/about";
 @use "../components/organisms/banner";
 @use "../components/organisms/partners";
@@ -17,6 +18,7 @@
 @use "../components/organisms/footer";
 @use "../components/organisms/popup";
 @use "../components/organisms/headers-complex";
+@use "../components/organisms/sections";
 
 .page {
   @include mixins.page(landing);
