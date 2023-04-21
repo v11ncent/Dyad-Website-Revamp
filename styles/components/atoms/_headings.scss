@@ -3,6 +3,10 @@
 
 %heading {
   // base styles
+  &-section {
+    font-size: 1.75rem;
+    font-weight: 500;
+  }
 }
 
 .heading {
@@ -15,7 +19,17 @@
   }
 
   &-section {
-    font-size: 1.75rem;
+    @extend %heading-section;
+    text-align: center;
+
+    &-about {
+      @extend %heading-section;
+      text-align: left;
+    }
+  }
+
+  &-banner {
+    font-size: 3.5rem;
     font-weight: 500;
   }
 }

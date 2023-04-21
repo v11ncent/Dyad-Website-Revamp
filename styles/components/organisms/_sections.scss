@@ -23,4 +23,11 @@
   &-about {
     @extend %section;
   }
+
+  &-banner {
+    @extend %section;
+    margin-inline: 1rem;
+    background-color: tokens.$colors-brand-muted;
+    border-radius: tokens.$br-main;
+  }
 }

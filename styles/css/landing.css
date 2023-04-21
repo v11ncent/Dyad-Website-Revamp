@@ -103,13 +103,24 @@ body {
   cursor: pointer;
 }
 
+.heading-section-about, .heading-section {
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
 .heading-main {
   font-size: clamp(2.75rem, 3.125vw, 3.5rem);
   font-weight: 600;
   line-height: 1;
 }
 .heading-section {
-  font-size: 1.75rem;
+  text-align: center;
+}
+.heading-section-about {
+  text-align: left;
+}
+.heading-banner {
+  font-size: 3.5rem;
   font-weight: 500;
 }
 
@@ -145,6 +156,9 @@ body {
   font-size: 1.25rem;
   color: rgba(0, 0, 0, 0.7);
 }
+.paragraph-banner {
+  font-size: 1.25rem;
+}
 
 .image-about {
   width: 100%;
@@ -154,7 +168,7 @@ body {
   border-radius: 0.25rem;
 }
 
-.list-navigation, .list {
+.list-banner, .list-navigation, .list {
   list-style-type: none;
   padding: 0;
 }
@@ -169,6 +183,26 @@ body {
     align-items: center;
     justify-content: center;
     gap: 4rem;
+    flex-wrap: nowrap;
+  }
+}
+.list-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+  flex-wrap: nowrap;
+  text-align: center;
+  gap: 5rem;
+}
+@media (min-width: 62.5rem) {
+  .list-banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0rem;
     flex-wrap: nowrap;
   }
 }
@@ -254,6 +288,13 @@ body {
   border-radius: 0.25rem;
 }
 
+.container-section-banner, .container-section {
+  max-width: 81.25rem;
+  padding-inline: 1rem;
+  flex: 1;
+  margin: 0 auto;
+}
+
 .container {
   /*
    * For Hero component for now, refactor if need to be more general later
@@ -280,6 +321,9 @@ body {
   justify-content: center;
   gap: 2rem;
   flex-wrap: nowrap;
+}
+.container-section-banner {
+  padding-inline: 2rem;
 }
 .container-about {
   max-width: 81.25rem;
@@ -353,6 +397,9 @@ body {
   }
 }
 .header-simple-section {
+  margin-bottom: 4rem;
+}
+.header-simple-section-about {
   margin-bottom: 1rem;
 }
 
@@ -387,68 +434,6 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 6rem;
   }
-}
-
-.banner {
-  padding-block: 2.5rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 0rem;
-  flex-wrap: nowrap;
-  border-radius: 0.25rem;
-  background-color: #f8f4fd;
-  margin-inline: 1rem;
-}
-@media (min-width: 62.5rem) {
-  .banner {
-    padding-block: min(5vw, 5rem);
-  }
-}
-.banner .max-width {
-  padding: 2rem;
-}
-@media (min-width: 87.5rem) {
-  .banner .max-width {
-    padding-inline: 0;
-  }
-}
-
-.banner .stats {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5rem;
-  flex-wrap: nowrap;
-  text-align: center;
-}
-@media (min-width: 53.125rem) {
-  .banner .stats {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 5rem;
-    flex-wrap: nowrap;
-  }
-}
-
-.stats > .stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0rem;
-  flex-wrap: nowrap;
-}
-.stats > .stat .stat__heading {
-  font-size: 3.5rem;
-  font-weight: 500;
-  line-height: 1;
 }
 
 .partners .partners__list {
@@ -632,11 +617,11 @@ body {
   flex-wrap: nowrap;
 }
 
-.section-about, .section-hero, .section {
+.section-banner, .section-about, .section-hero, .section {
   padding-block: 2.5rem;
 }
 @media (min-width: 62.5rem) {
-  .section-about, .section-hero, .section {
+  .section-banner, .section-about, .section-hero, .section {
     padding-block: min(5vw, 5rem);
   }
 }
@@ -656,6 +641,11 @@ body {
     text-align: center;
     min-height: 70vh;
   }
+}
+.section-banner {
+  margin-inline: 1rem;
+  background-color: #f8f4fd;
+  border-radius: 0.25rem;
 }
 
 /*# sourceMappingURL=landing.css.map */
