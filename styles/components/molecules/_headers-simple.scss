@@ -13,6 +13,14 @@
 .header-simple {
   @extend %header-simple;
 
+  &-hero {
+    min-width: 100%;
+
+    @media (min-width: tokens.$bp-main-nav) {
+      min-width: fit-content;
+    }
+  }
+
   &-section {
     margin-bottom: 1rem;
   }

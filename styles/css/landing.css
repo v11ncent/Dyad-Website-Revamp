@@ -254,6 +254,11 @@ body {
   border-radius: 0.25rem;
 }
 
+.container {
+  /*
+   * For Hero component for now, refactor if need to be more general later
+   */
+}
 .container-navigation {
   max-width: 81.25rem;
   padding-inline: 1rem;
@@ -295,13 +300,21 @@ body {
 }
 .container-buttons {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   flex-wrap: nowrap;
+  min-width: 100%;
+  text-align: center;
+  /*
+   * When main navigation appears
+   */
 }
-@media (min-width: 43.75rem) {
+.container-buttons > * {
+  min-width: 100%;
+}
+@media (min-width: 40.625rem) {
   .container-buttons {
     display: flex;
     flex-direction: row;
@@ -309,6 +322,10 @@ body {
     justify-content: center;
     gap: 2rem;
     flex-wrap: nowrap;
+    min-width: fit-content;
+  }
+  .container-buttons > * {
+    min-width: fit-content;
   }
 }
 .navigation-main {
@@ -327,6 +344,14 @@ body {
  * This is the simpler version of the headers component.
  * Used mainly for cards and introductory content that contains simple atoms.
  */
+.header-simple-hero {
+  min-width: 100%;
+}
+@media (min-width: 40.625rem) {
+  .header-simple-hero {
+    min-width: fit-content;
+  }
+}
 .header-simple-section {
   margin-bottom: 1rem;
 }
@@ -607,11 +632,11 @@ body {
   flex-wrap: nowrap;
 }
 
-.section-about, .section {
+.section-about, .section-hero, .section {
   padding-block: 2.5rem;
 }
 @media (min-width: 62.5rem) {
-  .section-about, .section {
+  .section-about, .section-hero, .section {
     padding-block: min(5vw, 5rem);
   }
 }
@@ -626,10 +651,10 @@ body {
   text-align: left;
   font-size: 1.25rem;
 }
-@media (min-width: 43.75rem) {
+@media (min-width: 40.625rem) {
   .section-hero {
     text-align: center;
-    min-height: 80vh;
+    min-height: 70vh;
   }
 }
 

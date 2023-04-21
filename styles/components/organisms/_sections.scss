@@ -9,13 +9,14 @@
   @extend %section;
 
   &-hero {
+    @extend %section;
     @include mixins.flex(row, center, center, 1);
     text-align: left;
     font-size: 1.25rem;
 
-    @media (min-width: tokens.$bp-hero) {
+    @media (min-width: tokens.$bp-main-nav) {
       text-align: center;
-      min-height: 80vh;
+      min-height: 70vh;
     }
   }
 

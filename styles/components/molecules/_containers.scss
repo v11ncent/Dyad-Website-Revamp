@@ -37,12 +37,31 @@
     }
   }
 
+  /*
+   * For Hero component for now, refactor if need to be more general later
+   */
+
   &-buttons {
     @extend %container;
-    @include mixins.flex(row, center, center, 1);
+    @include mixins.flex(column, center, center, 1);
+    min-width: 100%;
+    text-align: center;
 
-    @media (min-width: tokens.$bp-hero) {
+    & > * {
+      min-width: 100%;
+    }
+
+    /*
+     * When main navigation appears
+     */
+
+    @media (min-width: tokens.$bp-main-nav) {
       @include mixins.flex(row, center, center, 2);
+      min-width: fit-content;
+
+      & > * {
+        min-width: fit-content;
+      }
     }
   }
 
