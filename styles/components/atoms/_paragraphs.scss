@@ -46,4 +46,9 @@
       text-overflow: ellipsis;
     }
   }
+
+  &-popup {
+    max-width: 40ch;
+    color: tokens.$colors-grey;
+  }
 }

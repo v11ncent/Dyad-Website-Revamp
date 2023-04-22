@@ -86,10 +86,16 @@ body {
   border-width: 0;
 }
 
-.button {
+.button-popup, .button {
   font-weight: 500;
   border: transparent;
   cursor: pointer;
+}
+
+.button-popup {
+  text-decoration: underline;
+  color: #662dbc;
+  background-color: transparent;
 }
 
 .heading-section-about, .heading-section {
@@ -117,6 +123,10 @@ body {
   font-weight: 500;
 }
 .heading-footer-list {
+  font-weight: 500;
+}
+.heading-popup {
+  font-size: 1.25rem;
   font-weight: 500;
 }
 
@@ -183,6 +193,10 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.paragraph-popup {
+  max-width: 40ch;
+  color: rgba(0, 0, 0, 0.65);
 }
 
 .image-card-blog, .image-card-team, .image-card {
@@ -663,42 +677,6 @@ body {
   }
 }
 
-.popup[open] {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  flex-wrap: nowrap;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-  min-width: 100%;
-  padding: 1.25rem;
-  font-size: 1.25rem;
-  text-align: center;
-  background-color: white;
-  border: 1px solid lightgrey;
-  border-radius: 0.25rem;
-  box-shadow: 0rem 0.375rem 1.5rem 0rem rgba(140, 152, 164, 0.125);
-  z-index: 999;
-}
-.popup[open] h2 {
-  line-height: 1;
-  font-size: 1.25rem;
-  font-weight: 500;
-}
-.popup[open] button {
-  font-size: 1rem;
-}
-@media (min-width: 50rem) {
-  .popup[open] {
-    min-width: fit-content;
-    margin-bottom: 1rem;
-  }
-}
-
 /*
  * This is the complex version of the headers component.
  * Used mainly for navigation, where multiple molecules can be stored.
@@ -766,6 +744,32 @@ body {
 .section-footer-copywrite p {
   max-width: fit-content;
   margin: 0 auto;
+}
+
+.popup[open] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: nowrap;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  background-color: white;
+  border: 1px solid lightgrey;
+  border-radius: 0.25rem;
+  box-shadow: 0rem 0.375rem 1.5rem 0rem rgba(140, 152, 164, 0.125);
+  z-index: 1000;
+  min-width: 100%;
+}
+@media (min-width: 50rem) {
+  .popup[open] {
+    min-width: fit-content;
+    margin-bottom: 1rem;
+  }
 }
 
 /*# sourceMappingURL=landing.css.map */

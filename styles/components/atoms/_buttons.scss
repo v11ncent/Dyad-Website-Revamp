@@ -7,4 +7,11 @@
 
 .button {
   @extend %button;
+
+  &-popup {
+    @extend %button;
+    text-decoration: underline;
+    color: tokens.$colors-brand;
+    background-color: transparent;
+  }
 }

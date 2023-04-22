@@ -16,9 +16,9 @@
 @use "../components/organisms/about";
 @use "../components/organisms/cards";
 @use "../components/organisms/footer";
-@use "../components/organisms/popup";
 @use "../components/organisms/headers-complex";
 @use "../components/organisms/sections";
+@use "../components/organisms/popups";
 
 .page {
   @include mixins.page(landing);
