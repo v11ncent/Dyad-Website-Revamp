@@ -41,4 +41,14 @@
       border-radius: tokens.$br-main;
     }
   }
+
+  &-logo {
+    max-height: 3.5rem;
+    border-radius: 50%;
+    border: 1px solid lightgrey;
+
+    @media (min-width: 62.5rem) {
+      max-height: 4.5rem;
+    }
+  }
 }

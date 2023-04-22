@@ -30,4 +30,25 @@
     background-color: tokens.$colors-brand-muted;
     border-radius: tokens.$br-main;
   }
+
+  &-footer {
+    // base styles
+
+    &-navigation {
+      @include mixins.flex(column, flex-start, center, 2);
+
+      @media (min-width: 46.875rem) {
+        @include mixins.flex(row, flex-start, space-between, 4, wrap);
+      }
+    }
+
+    &-copywrite {
+      padding-block: 3rem;
+
+      p {
+        max-width: fit-content;
+        margin: 0 auto;
+      }
+    }
+  }
 }

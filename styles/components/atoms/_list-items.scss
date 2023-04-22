@@ -32,4 +32,9 @@
       @extend %list-item-card;
     }
   }
+
+  &-footer {
+    margin-block: 0.5rem;
+    color: tokens.$colors-grey;
+  }
 }

@@ -10,16 +10,6 @@ body {
   font-family: tokens.$ff-main;
 }
 
-.logo {
-  border-radius: 50%;
-  max-height: 3.5rem;
-  border: 1px solid lightgrey;
-
-  @media (min-width: 62.5rem) {
-    max-height: 4.5rem;
-  }
-}
-
 .sr-only {
   position: absolute;
   width: 1px;

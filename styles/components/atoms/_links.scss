@@ -3,6 +3,11 @@
 
 %link {
   color: inherit;
+
+  &-no-underline {
+    @extend %link;
+    @include mixins.reset-anchor();
+  }
 }
 
 .link {
@@ -23,13 +28,29 @@
   }
 
   &-rounded {
-    @extend %link;
+    @extend %link-no-underline;
     padding: 0.8125rem 1.25rem;
+    text-decoration: none;
+    border: 1px solid lightgrey;
     border-radius: 2rem;
+
+    .highlight {
+      color: tokens.$colors-brand;
+    }
   }
 
   &-no-underline {
-    @extend %link;
-    @include mixins.reset-anchor();
+    @extend %link-no-underline;
+  }
+
+  &-address {
+    @extend %link-no-underline;
+    display: block;
+  }
+
+  &-footer {
+    @extend %link-no-underline;
+    margin-block: 0.5rem;
+    color: tokens.$colors-grey;
   }
 }

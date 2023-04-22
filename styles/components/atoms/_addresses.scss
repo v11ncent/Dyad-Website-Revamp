@@ -1,0 +1,16 @@
+@use "../../tokens/tokens" as tokens;
+@use "../../mixins/mixins" as mixins;
+
+%address {
+  // base styles
+}
+
+.address {
+  @extend %address;
+
+  &-footer {
+    margin-top: 2rem;
+    text-decoration: none;
+    color: tokens.$colors-grey;
+  }
+}
