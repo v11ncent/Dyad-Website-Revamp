@@ -21,4 +21,17 @@
     @extend %image;
     max-width: 12.5rem;
   }
+
+  &-card {
+    // base styles
+
+    &-team {
+      max-width: 4.25rem;
+      margin-bottom: 1.5rem;
+      border-radius: 100%;
+    }
+
+    &-blog {
+    }
+  }
 }

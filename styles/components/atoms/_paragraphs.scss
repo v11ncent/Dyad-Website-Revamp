@@ -23,4 +23,27 @@
   &-banner {
     font-size: 1.25rem;
   }
+
+  &-card {
+    &-title {
+      font-size: 0.875rem;
+      color: tokens.$colors-grey;
+      text-transform: uppercase;
+    }
+
+    &-description {
+      font-size: 1.125rem;
+      color: tokens.$colors-grey;
+
+      /*
+       * Limits description to 5 lines, addes ellipses if more than 5
+       */
+
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
 }

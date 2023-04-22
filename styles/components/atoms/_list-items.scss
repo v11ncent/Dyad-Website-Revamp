@@ -1,0 +1,22 @@
+@use "../../tokens/tokens" as tokens;
+@use "../../mixins/mixins" as mixins;
+
+%list-item {
+  // base styles
+}
+
+.list-item {
+  @extend %list-item;
+
+  &-card {
+    padding: 2rem;
+    box-shadow: tokens.$shadows-main;
+
+    &-social {
+      max-width: 1.75rem;
+      padding: 0.25rem;
+      border-radius: tokens.$br-main;
+      border: 1px solid lightgrey;
+    }
+  }
+}
