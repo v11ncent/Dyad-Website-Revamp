@@ -3,20 +3,33 @@
 
 %list-item {
   // base styles
+
+  &-card {
+    border-radius: tokens.$br-main;
+  }
 }
 
 .list-item {
   @extend %list-item;
 
   &-card {
-    padding: 2rem;
-    box-shadow: tokens.$shadows-main;
+    @extend %list-item-card;
+
+    &-team {
+      @extend %list-item-card;
+      padding: 1.75rem;
+      box-shadow: tokens.$shadows-main;
+    }
 
     &-social {
       max-width: 1.75rem;
       padding: 0.25rem;
       border-radius: tokens.$br-main;
       border: 1px solid lightgrey;
+    }
+
+    &-blog {
+      @extend %list-item-card;
     }
   }
 }

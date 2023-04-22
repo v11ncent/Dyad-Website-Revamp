@@ -181,6 +181,10 @@ body {
   text-overflow: ellipsis;
 }
 
+.image-card-blog, .image-card-team, .image-card {
+  margin-bottom: 1.5rem;
+}
+
 .image-about {
   width: 100%;
   max-height: 32.5rem;
@@ -193,11 +197,20 @@ body {
 }
 .image-card-team {
   max-width: 4.25rem;
-  margin-bottom: 1.5rem;
   border-radius: 100%;
 }
-.list-item-card {
-  padding: 2rem;
+.image-card-blog {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.25rem;
+}
+
+.list-item-card-blog, .list-item-card-team, .list-item-card {
+  border-radius: 0.25rem;
+}
+
+.list-item-card-team {
+  padding: 1.75rem;
   box-shadow: 0rem 0.375rem 1.5rem 0rem rgba(140, 152, 164, 0.125);
 }
 .list-item-card-social {
@@ -206,7 +219,6 @@ body {
   border-radius: 0.25rem;
   border: 1px solid lightgrey;
 }
-
 .list-cards-socials, .list-cards, .list-partners, .list-banner, .list-navigation, .list {
   list-style-type: none;
   padding: 0;

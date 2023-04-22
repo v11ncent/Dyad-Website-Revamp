@@ -3,6 +3,9 @@
 
 %image {
   // base styles
+  &-card {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .image {
@@ -23,15 +26,19 @@
   }
 
   &-card {
-    // base styles
+    @extend %image-card;
 
     &-team {
+      @extend %image-card;
       max-width: 4.25rem;
-      margin-bottom: 1.5rem;
       border-radius: 100%;
     }
 
     &-blog {
+      @extend %image-card;
+      width: 100%;
+      object-fit: cover;
+      border-radius: tokens.$br-main;
     }
   }
 }
