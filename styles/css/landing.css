@@ -86,7 +86,7 @@ body {
   border-width: 0;
 }
 
-.button-popup, .button {
+.button-form[type=submit], .button-popup, .button {
   font-weight: 500;
   border: transparent;
   cursor: pointer;
@@ -96,6 +96,10 @@ body {
   text-decoration: underline;
   color: #662dbc;
   background-color: transparent;
+}
+.button-form[type=submit] {
+  margin-top: 1rem;
+  min-width: 100%;
 }
 
 .heading-section-about, .heading-section {
@@ -165,27 +169,35 @@ body {
   color: rgba(0, 0, 0, 0.65);
 }
 
+.paragraph-content, .paragraph, .paragraph-content-center, .paragraph-center {
+  max-width: 70ch;
+  color: rgba(0, 0, 0, 0.65);
+}
+.paragraph-content-center, .paragraph-center {
+  text-align: center;
+}
+
 .paragraph-hero {
   max-width: 60ch;
   font-size: 1.5rem;
-  color: rgba(0, 0, 0, 0.65);
 }
 .paragraph-content {
   margin-block: 0.75rem;
   font-size: 1.25rem;
-  color: rgba(0, 0, 0, 0.65);
+}
+.paragraph-content-center {
+  margin-block: 0.75rem;
+  font-size: 1.25rem;
 }
 .paragraph-banner {
   font-size: 1.25rem;
 }
 .paragraph-card-title {
   font-size: 0.875rem;
-  color: rgba(0, 0, 0, 0.65);
   text-transform: uppercase;
 }
 .paragraph-card-description {
   font-size: 1.125rem;
-  color: rgba(0, 0, 0, 0.65);
   /*
    * Limits description to 5 lines, addes ellipses if more than 5
    */
@@ -197,7 +209,6 @@ body {
 }
 .paragraph-popup {
   max-width: 40ch;
-  color: rgba(0, 0, 0, 0.65);
 }
 
 .image-card-blog, .image-card-team, .image-card {
