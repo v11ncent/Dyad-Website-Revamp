@@ -155,7 +155,7 @@ body {
   padding: 0.8125rem 1.25rem;
   border: 1px solid lightgrey;
   border-radius: 2rem;
-  color: rgba(0, 0, 0, 0.65);
+  color: #4f4f4f;
   text-decoration: none;
 }
 .link-rounded .highlight {
@@ -166,12 +166,12 @@ body {
 }
 .link-footer {
   margin-block: 0.5rem;
-  color: rgba(0, 0, 0, 0.65);
+  color: #4f4f4f;
 }
 
-.paragraph-content, .paragraph, .paragraph-content-center, .paragraph-center {
+.paragraph-card-description, .paragraph-card-title, .paragraph-card, .paragraph-banner, .paragraph-content, .paragraph-hero, .paragraph, .paragraph-content-center, .paragraph-center {
   max-width: 70ch;
-  color: rgba(0, 0, 0, 0.65);
+  color: #4f4f4f;
 }
 .paragraph-content-center, .paragraph-center {
   text-align: center;
@@ -248,7 +248,7 @@ body {
 .address-footer {
   margin-top: 2rem;
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.65);
+  color: #4f4f4f;
 }
 
 .list-item-card-blog, .list-item-card-team, .list-item-card {
@@ -267,7 +267,7 @@ body {
 }
 .list-item-footer {
   margin-block: 0.5rem;
-  color: rgba(0, 0, 0, 0.65);
+  color: #4f4f4f;
 }
 
 .list-cards-socials, .list-cards, .list-partners, .list-banner, .list-navigation, .list {
