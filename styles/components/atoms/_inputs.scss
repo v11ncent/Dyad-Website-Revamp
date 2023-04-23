@@ -1,0 +1,17 @@
+@use "../../tokens/tokens" as tokens;
+@use "../../mixins/mixins" as mixins;
+
+%input {
+  min-width: 100%;
+  padding: 0.5rem;
+  border: 1px solid lightgrey;
+  border-radius: tokens.$br-main;
+
+  &:focus {
+    outline: 2px solid tokens.$colors-brand;
+  }
+}
+
+.input {
+  @extend %input;
+}

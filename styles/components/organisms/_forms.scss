@@ -1,0 +1,20 @@
+@use "../../tokens/tokens" as tokens;
+@use "../../mixins/mixins" as mixins;
+
+%form {
+  @include mixins.flex(column, center, center);
+  gap: 1.5rem;
+}
+
+.form {
+  @extend %form;
+
+  &-login {
+    @extend %form;
+    min-width: 80%;
+
+    @media (min-width: tokens.$bp-login-form) {
+      min-width: 30rem;
+    }
+  }
+}

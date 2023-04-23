@@ -149,9 +149,10 @@ body {
 }
 .link-rounded {
   padding: 0.8125rem 1.25rem;
-  text-decoration: none;
   border: 1px solid lightgrey;
   border-radius: 2rem;
+  color: rgba(0, 0, 0, 0.65);
+  text-decoration: none;
 }
 .link-rounded .highlight {
   color: #662dbc;

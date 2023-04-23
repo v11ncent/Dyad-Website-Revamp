@@ -30,9 +30,10 @@
   &-rounded {
     @extend %link-no-underline;
     padding: 0.8125rem 1.25rem;
-    text-decoration: none;
     border: 1px solid lightgrey;
     border-radius: 2rem;
+    color: tokens.$colors-grey;
+    text-decoration: none;
 
     .highlight {
       color: tokens.$colors-brand;
