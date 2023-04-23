@@ -1,0 +1,20 @@
+@use "../../mixins/mixins" as mixins;
+@use "../../tokens/tokens" as tokens;
+
+/*
+ * This is the complex version of the headers component.
+ * Used mainly for navigation, where multiple molecules can be stored.
+ */
+
+%header-complex {
+  // base styles
+}
+
+.header-complex {
+  @extend %header-complex;
+
+  &-navigation {
+    @extend %header-complex;
+    @include mixins.flex(row, center, center);
+  }
+}

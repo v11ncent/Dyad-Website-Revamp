@@ -1,0 +1,49 @@
+@use "../../tokens/tokens" as tokens;
+@use "../../mixins/mixins" as mixins;
+
+%heading {
+  // base styles
+  &-section {
+    font-size: 1.75rem;
+    font-weight: 500;
+  }
+}
+
+.heading {
+  @extend %heading;
+
+  &-main {
+    font-size: clamp(2.75rem, 3.125vw, 3.5rem);
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  &-section {
+    @extend %heading-section;
+    text-align: center;
+
+    &-about {
+      @extend %heading-section;
+      text-align: left;
+    }
+  }
+
+  &-banner {
+    font-size: 3.5rem;
+    font-weight: 500;
+  }
+
+  &-card {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  &-footer-list {
+    font-weight: 500;
+  }
+
+  &-popup {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+}

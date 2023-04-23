@@ -5,13 +5,19 @@
  * @param {string} $alignItems - The alignment of items in either the x or y axis. (flex-start, center, space-between)
  * @param {string} $justifyContent - The alignment of items in either the x or y axis. (flex-start, center, space-between)
  * @param {number} $gap - The gap between child elements. (any number)
+ * @param {number} $wrap - Whether the flex element wraps or not. (boolean)
  */
 
-@mixin flex($direction, $alignItems, $justifyContent, $gap: 0) {
+@mixin flex($direction, $alignItems, $justifyContent, $gap: 0, $wrap: false) {
   display: flex;
   flex-direction: $direction;
   align-items: $alignItems;
   justify-content: $justifyContent;
   gap: #{$gap}rem;
-  flex-wrap: wrap;
+
+  @if $wrap {
+    flex-wrap: wrap;
+  } @else {
+    flex-wrap: nowrap;
+  }
 }

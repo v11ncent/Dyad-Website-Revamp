@@ -1,9 +1,7 @@
 @mixin section() {
-  padding: 2.5rem 0 2.5rem 0; //fallback
   padding-block: 2.5rem;
 
   @media (min-width: 62.5rem) {
-    padding: 5rem 0 5rem 0; //fallback
     padding-block: min(5vw, 5rem);
   }
 }

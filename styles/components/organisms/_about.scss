@@ -1,5 +1,5 @@
-@use "../mixins/mixins" as mixins;
-@use "../tokens/tokens" as tokens;
+@use "../../mixins/mixins" as mixins;
+@use "../../tokens/tokens" as tokens;
 
 .about {
   font-size: 1.25rem;
@@ -8,22 +8,6 @@
     display: grid;
     gap: 1rem;
     place-items: center end;
-
-    .content__container {
-      @include mixins.flex(column, flex-start, space-between);
-
-      header {
-        min-width: 100%;
-        margin-bottom: 1rem; // changed from default header mixin
-
-        h2 {
-          @media (min-width: tokens.$bp-about) {
-            text-align: left;
-            align-self: flex-start;
-          }
-        }
-      }
-    }
 
     .image__container {
       width: 100%;

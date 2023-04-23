@@ -1,0 +1,84 @@
+@use "../../mixins/mixins";
+@use "../../tokens/tokens";
+
+%container {
+  // base styles
+  &-section {
+    @include mixins.container();
+    margin: 0 auto;
+  }
+}
+
+.container {
+  @extend %container;
+
+  &-navigation {
+    @extend %container;
+    @include mixins.container();
+    @include mixins.flex(row, center, center);
+  }
+
+  &-hero {
+    @extend %container;
+    @include mixins.container();
+    @include mixins.flex(column, center, center, 2);
+  }
+
+  &-section {
+    @extend %container-section;
+
+    &-banner {
+      @extend %container-section;
+      padding-inline: 2rem;
+    }
+  }
+
+  &-about {
+    @extend %container;
+    @include mixins.container();
+    display: grid;
+    gap: 2rem;
+    margin: 0 auto;
+
+    & > * {
+      flex: 1;
+    }
+
+    @media (min-width: 81.25rem) {
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+    }
+  }
+
+  /*
+   * For Hero component for now, refactor if need to be more general later
+   */
+
+  &-buttons {
+    @extend %container;
+    @include mixins.flex(column, center, center, 1);
+    min-width: 100%;
+    text-align: center;
+
+    & > * {
+      min-width: 100%;
+    }
+
+    /*
+     * When main navigation appears
+     */
+
+    @media (min-width: tokens.$bp-main-nav) {
+      @include mixins.flex(row, center, center, 2);
+      min-width: fit-content;
+
+      & > * {
+        min-width: fit-content;
+      }
+    }
+  }
+
+  &-image {
+    @extend %container;
+  }
+}

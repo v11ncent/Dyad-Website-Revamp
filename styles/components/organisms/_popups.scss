@@ -1,0 +1,26 @@
+@use "../../mixins/mixins" as mixins;
+@use "../../tokens/tokens" as tokens;
+
+%popup {
+  @include mixins.flex(column, center, center, 0.75);
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  background-color: white;
+  border: 1px solid lightgrey;
+  border-radius: tokens.$br-main;
+  box-shadow: tokens.$shadows-main;
+  z-index: 1000;
+  min-width: 100%;
+
+  @media (min-width: 50rem) {
+    min-width: fit-content;
+    margin-bottom: 1rem;
+  }
+}
+
+.popup[open] {
+  @extend %popup;
+}

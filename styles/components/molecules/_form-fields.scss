@@ -1,0 +1,11 @@
+@use "../../tokens/tokens" as tokens;
+@use "../../mixins/mixins" as mixins;
+
+%form-field {
+  @include mixins.flex(column, center, center, 0.5);
+  min-width: 100%;
+}
+
+.form-field {
+  @extend %form-field;
+}

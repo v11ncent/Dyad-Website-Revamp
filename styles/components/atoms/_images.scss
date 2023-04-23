@@ -1,0 +1,54 @@
+@use "../../tokens/tokens" as tokens;
+@use "../../mixins/mixins" as mixins;
+
+%image {
+  // base styles
+  &-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.image {
+  @extend %image;
+
+  &-about {
+    @extend %image;
+    width: 100%;
+    max-height: 32.5rem;
+    object-fit: cover;
+    object-position: top;
+    border-radius: tokens.$br-main;
+  }
+
+  &-partner {
+    @extend %image;
+    max-width: 12.5rem;
+  }
+
+  &-card {
+    @extend %image-card;
+
+    &-team {
+      @extend %image-card;
+      max-width: 4.25rem;
+      border-radius: 100%;
+    }
+
+    &-blog {
+      @extend %image-card;
+      width: 100%;
+      object-fit: cover;
+      border-radius: tokens.$br-main;
+    }
+  }
+
+  &-logo {
+    max-height: 3.5rem;
+    border-radius: 50%;
+    border: 1px solid lightgrey;
+
+    @media (min-width: 62.5rem) {
+      max-height: 4.5rem;
+    }
+  }
+}

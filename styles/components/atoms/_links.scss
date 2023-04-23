@@ -1,0 +1,57 @@
+@use "../../tokens/tokens" as tokens;
+@use "../../mixins/mixins" as mixins;
+
+%link {
+  color: inherit;
+
+  &-no-underline {
+    @extend %link;
+    @include mixins.reset-anchor();
+  }
+}
+
+.link {
+  @extend %link;
+
+  &-cta {
+    @extend %link;
+    padding: 0.75rem 3rem;
+    border-radius: tokens.$br-main;
+    background-color: tokens.$colors-brand;
+    text-decoration: none;
+    color: white;
+  }
+
+  &-brand {
+    @extend %link;
+    color: tokens.$colors-brand;
+  }
+
+  &-rounded {
+    @extend %link-no-underline;
+    padding: 0.8125rem 1.25rem;
+    border: 1px solid lightgrey;
+    border-radius: 2rem;
+    color: tokens.$colors-grey;
+    text-decoration: none;
+
+    .highlight {
+      color: tokens.$colors-brand;
+    }
+  }
+
+  &-no-underline {
+    @extend %link-no-underline;
+  }
+
+  &-address {
+    @extend %link-no-underline;
+    display: block;
+  }
+
+  &-footer {
+    @extend %link-no-underline;
+    margin-block: 0.5rem;
+    color: tokens.$colors-grey;
+  }
+}

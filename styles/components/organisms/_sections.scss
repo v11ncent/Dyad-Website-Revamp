@@ -1,0 +1,54 @@
+@use "../../mixins/mixins" as mixins;
+@use "../../tokens/tokens" as tokens;
+
+%section {
+  @include mixins.section();
+}
+
+.section {
+  @extend %section;
+
+  &-hero {
+    @extend %section;
+    @include mixins.flex(row, center, center, 1);
+    text-align: left;
+    font-size: 1.25rem;
+
+    @media (min-width: tokens.$bp-main-nav) {
+      text-align: center;
+      min-height: 70vh;
+    }
+  }
+
+  &-about {
+    @extend %section;
+  }
+
+  &-banner {
+    @extend %section;
+    margin-inline: 1rem;
+    background-color: tokens.$colors-brand-muted;
+    border-radius: tokens.$br-main;
+  }
+
+  &-footer {
+    // base styles
+
+    &-navigation {
+      @include mixins.flex(column, flex-start, center, 2);
+
+      @media (min-width: 46.875rem) {
+        @include mixins.flex(row, flex-start, space-between, 4, wrap);
+      }
+    }
+
+    &-copywrite {
+      padding-block: 3rem;
+
+      p {
+        max-width: fit-content;
+        margin: 0 auto;
+      }
+    }
+  }
+}

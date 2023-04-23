@@ -1,0 +1,44 @@
+@use "../../mixins/mixins" as mixins;
+@use "../../tokens/tokens" as tokens;
+
+/*
+ * This is the simpler version of the headers component.
+ * Used mainly for cards and introductory content that contains simple atoms.
+ */
+
+%header-simple {
+  // base styles
+}
+
+.header-simple {
+  @extend %header-simple;
+
+  &-hero {
+    min-width: 100%;
+
+    @media (min-width: tokens.$bp-main-nav) {
+      min-width: fit-content;
+    }
+  }
+
+  &-section {
+    margin-bottom: 4rem;
+
+    &-about {
+      margin-bottom: 1rem;
+    }
+  }
+
+  /*
+   * Since &-card and &-footer-list are the same, would make sense
+   * to rename it to be context-agnostic, eg &-small
+   */
+
+  &-card {
+    margin-bottom: 0.5rem;
+  }
+
+  &-footer-list {
+    margin-bottom: 0.5rem;
+  }
+}

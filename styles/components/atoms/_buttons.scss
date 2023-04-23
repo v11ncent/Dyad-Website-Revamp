@@ -1,0 +1,23 @@
+@use "../../tokens/tokens" as tokens;
+@use "../../mixins/mixins" as mixins;
+
+%button {
+  @include mixins.button();
+}
+
+.button {
+  @extend %button;
+
+  &-popup {
+    @extend %button;
+    text-decoration: underline;
+    color: tokens.$colors-brand;
+    background-color: transparent;
+  }
+
+  &-form[type="submit"] {
+    @extend %button;
+    margin-top: 1rem;
+    min-width: 100%;
+  }
+}

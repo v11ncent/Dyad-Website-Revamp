@@ -1,5 +1,5 @@
-@use "../mixins/mixins" as mixins;
-@use "../tokens/tokens" as tokens;
+@use "../../mixins/mixins" as mixins;
+@use "../../tokens/tokens" as tokens;
 
 .footer {
   background-color: tokens.$colors-brand-muted;
@@ -30,11 +30,6 @@
     @include mixins.flex(column, flex-start, center, 0.75);
   }
 
-  a {
-    @include mixins.reset-anchor();
-    color: tokens.$colors-paragraph;
-  }
-
   .contact {
     img {
       margin-bottom: 2rem;
@@ -53,7 +48,6 @@
 
 .footer .copyright {
   @include mixins.flex(row, center, flex-start);
-  color: tokens.$colors-paragraph;
   padding-block: 3rem;
 
   @media (min-width: 62.5rem) {
