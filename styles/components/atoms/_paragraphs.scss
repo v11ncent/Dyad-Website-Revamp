@@ -19,6 +19,7 @@
   }
 
   &-hero {
+    @extend %paragraph;
     max-width: 60ch;
     font-size: 1.5rem;
   }
@@ -36,16 +37,21 @@
   }
 
   &-banner {
+    @extend %paragraph;
     font-size: 1.25rem;
   }
 
   &-card {
+    @extend %paragraph;
+
     &-title {
+      @extend %paragraph;
       font-size: 0.875rem;
       text-transform: uppercase;
     }
 
     &-description {
+      @extend %paragraph;
       font-size: 1.125rem;
 
       /*
