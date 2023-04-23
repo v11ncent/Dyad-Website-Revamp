@@ -2,22 +2,37 @@
 @use "../../mixins/mixins" as mixins;
 
 %paragraph {
-  // base styles
+  max-width: 70ch;
+  color: tokens.$colors-grey;
+
+  &-center {
+    @extend %paragraph;
+    text-align: center;
+  }
 }
 
 .paragraph {
   @extend %paragraph;
 
+  &-center {
+    @extend %paragraph-center;
+  }
+
   &-hero {
     max-width: 60ch;
     font-size: 1.5rem;
-    color: tokens.$colors-grey;
   }
 
   &-content {
+    @extend %paragraph;
     margin-block: 0.75rem;
     font-size: 1.25rem;
-    color: tokens.$colors-grey;
+
+    &-center {
+      @extend %paragraph-center;
+      margin-block: 0.75rem;
+      font-size: 1.25rem;
+    }
   }
 
   &-banner {
@@ -27,13 +42,11 @@
   &-card {
     &-title {
       font-size: 0.875rem;
-      color: tokens.$colors-grey;
       text-transform: uppercase;
     }
 
     &-description {
       font-size: 1.125rem;
-      color: tokens.$colors-grey;
 
       /*
        * Limits description to 5 lines, addes ellipses if more than 5
@@ -49,6 +62,5 @@
 
   &-popup {
     max-width: 40ch;
-    color: tokens.$colors-grey;
   }
 }
