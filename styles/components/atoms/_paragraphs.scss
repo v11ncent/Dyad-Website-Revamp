@@ -64,6 +64,7 @@
   }
 
   &-popup {
+    @extend %paragraph;
     max-width: 40ch;
   }
 
