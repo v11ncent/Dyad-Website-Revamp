@@ -234,14 +234,10 @@ body {
   border-radius: 0.25rem;
 }
 .image-logo {
-  max-height: 3.5rem;
+  max-height: 4.5rem;
+  max-width: 4.5rem;
   border-radius: 50%;
   border: 1px solid lightgrey;
-}
-@media (min-width: 62.5rem) {
-  .image-logo {
-    max-height: 4.5rem;
-  }
 }
 .address-footer {
   margin-top: 2rem;
@@ -545,6 +541,9 @@ body {
 }
 .header-simple-section-about {
   margin-bottom: 1rem;
+}
+.header-simple-instructions {
+  margin-bottom: 2rem;
 }
 .header-simple-card {
   margin-bottom: 0.5rem;
