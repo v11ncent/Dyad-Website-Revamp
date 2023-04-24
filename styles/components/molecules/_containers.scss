@@ -3,9 +3,16 @@
 
 %container {
   // base styles
+
   &-section {
+    @extend %container;
     @include mixins.container();
     margin: 0 auto;
+  }
+
+  &-image {
+    @extend %container;
+    @include mixins.flex(row, center, center);
   }
 }
 
@@ -16,6 +23,10 @@
     @extend %container;
     @include mixins.container();
     @include mixins.flex(row, center, center);
+  }
+
+  &-image {
+    @extend %container-image;
   }
 
   &-hero {

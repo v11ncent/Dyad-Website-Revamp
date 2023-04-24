@@ -20,7 +20,7 @@
   &-about {
     @extend %image;
     @extend %image-cover;
-    max-height: 35rem;
+    max-height: 32.5rem;
     object-position: top;
     border-radius: tokens.$br-main;
   }

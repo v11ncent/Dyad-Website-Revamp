@@ -219,7 +219,7 @@ body {
 }
 
 .image-about {
-  max-height: 35rem;
+  max-height: 32.5rem;
   object-position: top;
   border-radius: 0.25rem;
 }
@@ -452,6 +452,14 @@ body {
   padding-inline: 1rem;
   flex: 1;
   margin: 0 auto;
+}
+.container-image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+  flex-wrap: nowrap;
 }
 
 .container {
