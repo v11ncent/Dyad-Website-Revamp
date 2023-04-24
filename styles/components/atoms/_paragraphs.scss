@@ -2,8 +2,13 @@
 @use "../../mixins/mixins" as mixins;
 
 %paragraph {
-  max-width: 70ch;
   color: tokens.$colors-grey;
+
+  &-content {
+    @extend %paragraph;
+    margin-block: 0.75rem;
+    font-size: 1.25rem;
+  }
 
   &-center {
     @extend %paragraph;
@@ -25,15 +30,7 @@
   }
 
   &-content {
-    @extend %paragraph;
-    margin-block: 0.75rem;
-    font-size: 1.25rem;
-
-    &-center {
-      @extend %paragraph-center;
-      margin-block: 0.75rem;
-      font-size: 1.25rem;
-    }
+    @extend %paragraph-content;
   }
 
   &-banner {
@@ -68,5 +65,11 @@
 
   &-popup {
     max-width: 40ch;
+  }
+
+  &-instructions {
+    @extend %paragraph-content;
+    @extend %paragraph-center;
+    max-width: 70ch;
   }
 }

@@ -23,6 +23,8 @@
   &-partner {
     @extend %image;
     max-width: 12.5rem;
+    width: 12.5rem; // For Page Speed Insight CLS score
+    height: 100%; // For Page Speed Insight CLS score
   }
 
   &-card {
@@ -30,20 +32,23 @@
 
     &-team {
       @extend %image-card;
-      max-width: 4.25rem;
+      width: 4.25rem; // For Page Speed Insight CLS score
+      height: 4.25rem; // For Page Speed Insight CLS score
       border-radius: 100%;
     }
 
     &-blog {
       @extend %image-card;
       width: 100%;
+      height: 100%;
       object-fit: cover;
       border-radius: tokens.$br-main;
     }
   }
 
   &-logo {
-    max-height: 3.5rem;
+    width: 3.5rem; // For Page Speed Insight CLS score
+    height: 3.5rem; // For Page Speed Insight CLS score
     border-radius: 50%;
     border: 1px solid lightgrey;
 

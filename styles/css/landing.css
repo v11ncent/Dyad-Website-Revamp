@@ -169,25 +169,20 @@ body {
   color: #4f4f4f;
 }
 
-.paragraph-card-description, .paragraph-card-title, .paragraph-card, .paragraph-banner, .paragraph-content, .paragraph-hero, .paragraph, .paragraph-content-center, .paragraph-center {
-  max-width: 70ch;
+.paragraph-card-description, .paragraph-card-title, .paragraph-card, .paragraph-banner, .paragraph-hero, .paragraph, .paragraph-instructions, .paragraph-center, .paragraph-content {
   color: #4f4f4f;
 }
-.paragraph-content-center, .paragraph-center {
+.paragraph-instructions, .paragraph-content {
+  margin-block: 0.75rem;
+  font-size: 1.25rem;
+}
+.paragraph-instructions, .paragraph-center {
   text-align: center;
 }
 
 .paragraph-hero {
   max-width: 60ch;
   font-size: 1.5rem;
-}
-.paragraph-content {
-  margin-block: 0.75rem;
-  font-size: 1.25rem;
-}
-.paragraph-content-center {
-  margin-block: 0.75rem;
-  font-size: 1.25rem;
 }
 .paragraph-banner {
   font-size: 1.25rem;
@@ -210,6 +205,9 @@ body {
 .paragraph-popup {
   max-width: 40ch;
 }
+.paragraph-instructions {
+  max-width: 70ch;
+}
 
 .image-card-blog, .image-card-team, .image-card {
   margin-bottom: 1.5rem;
@@ -224,18 +222,23 @@ body {
 }
 .image-partner {
   max-width: 12.5rem;
+  width: 12.5rem;
+  height: 100%;
 }
 .image-card-team {
-  max-width: 4.25rem;
+  width: 4.25rem;
+  height: 4.25rem;
   border-radius: 100%;
 }
 .image-card-blog {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 0.25rem;
 }
 .image-logo {
-  max-height: 3.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
   border-radius: 50%;
   border: 1px solid lightgrey;
 }
