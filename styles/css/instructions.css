@@ -169,7 +169,7 @@ body {
   color: #4f4f4f;
 }
 
-.paragraph-card-description, .paragraph-card-title, .paragraph-card, .paragraph-banner, .paragraph-hero, .paragraph, .paragraph-instructions, .paragraph-center, .paragraph-content {
+.paragraph-popup, .paragraph-card-description, .paragraph-card-title, .paragraph-card, .paragraph-banner, .paragraph-hero, .paragraph, .paragraph-instructions, .paragraph-center, .paragraph-content {
   color: #4f4f4f;
 }
 .paragraph-instructions, .paragraph-content {
@@ -234,14 +234,10 @@ body {
   border-radius: 0.25rem;
 }
 .image-logo {
-  max-height: 3.5rem;
+  max-height: 4.5rem;
+  max-width: 4.5rem;
   border-radius: 50%;
   border: 1px solid lightgrey;
-}
-@media (min-width: 62.5rem) {
-  .image-logo {
-    max-height: 4.5rem;
-  }
 }
 .address-footer {
   margin-top: 2rem;
@@ -795,13 +791,14 @@ body {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 0);
+  min-width: 100%;
+  font-size: 1.125rem;
   text-align: center;
   background-color: white;
   border: 1px solid lightgrey;
   border-radius: 0.25rem;
   box-shadow: 0rem 0.375rem 1.5rem 0rem rgba(140, 152, 164, 0.125);
   z-index: 1000;
-  min-width: 100%;
 }
 @media (min-width: 50rem) {
   .popup[open] {
