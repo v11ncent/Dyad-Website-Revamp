@@ -29,6 +29,10 @@
     }
   }
 
+  &-instructions {
+    margin-bottom: 2rem;
+  }
+
   /*
    * Since &-card and &-footer-list are the same, would make sense
    * to rename it to be context-agnostic, eg &-small
