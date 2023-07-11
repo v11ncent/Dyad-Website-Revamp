@@ -6,13 +6,7 @@
  * Used mainly for cards and introductory content that contains simple atoms.
  */
 
-%header-simple {
-  // base styles
-}
-
 .header-simple {
-  @extend %header-simple;
-
   &-hero {
     min-width: 100%;
 
@@ -22,7 +16,7 @@
   }
 
   &-section {
-    margin-bottom: 4rem;
+    margin-bottom: clamp(5rem, 8vw, 8rem);
 
     &-about {
       margin-bottom: 1rem;
