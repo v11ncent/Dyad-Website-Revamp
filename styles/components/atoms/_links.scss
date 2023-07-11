@@ -20,6 +20,7 @@
     background-color: tokens.$colors-brand;
     text-decoration: none;
     color: white;
+    font-size: clamp(1rem, 1.125vw, 1.25rem);
   }
 
   &-brand {
@@ -42,6 +43,12 @@
 
   &-no-underline {
     @extend %link-no-underline;
+    font-size: clamp(1rem, 1.125vw, 1.25rem);
+  }
+
+  &-footer {
+    @extend %link-no-underline;
+    font-size: clamp(1rem, 1.125vw, 1.125rem);
   }
 
   &-address {

@@ -12,7 +12,6 @@
     @extend %section;
     @include mixins.flex(row, center, center, 1);
     text-align: left;
-    font-size: 1.25rem;
 
     @media (min-width: tokens.$bp-main-nav) {
       text-align: center;
@@ -38,7 +37,7 @@
       @include mixins.flex(column, flex-start, center, 2);
 
       @media (min-width: 46.875rem) {
-        @include mixins.flex(row, flex-start, space-between, 4, wrap);
+        @include mixins.flex(row, flex-start, center, 10, wrap);
       }
     }
 
